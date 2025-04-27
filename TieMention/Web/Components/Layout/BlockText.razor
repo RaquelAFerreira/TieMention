@@ -1,0 +1,24 @@
+
+<div class="text-content">
+    <div class="text-block">
+        <div class="green-bar"></div>
+        <div class="text-section">
+            @Head
+        </div>
+    </div>
+    <div class="text-block">
+        <div class="green-bar tall"></div>
+        <div class="text-section tall">
+            @Text
+        </div>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public String? Head {get; set;}
+
+    [Parameter]
+    public String? Text {get; set;}
+
+}

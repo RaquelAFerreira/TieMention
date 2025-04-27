@@ -1,0 +1,31 @@
+    /* Search bar styles */
+    .search-container {
+        border-width: 4px;
+        border-color: #74a814;
+        padding: 1rem;
+        margin-top: 1rem;
+    }
+
+    @media (min-width: 768px) {
+        .search-container {
+            margin-top: 60px;
+        }
+    }
+
+    .search-input {
+        background-color: black;
+        color: #74a814;
+        outline: none;
+        width: 100%;
+    }
+
+    .search-input::placeholder { 
+        color: #74a814;
+        opacity: 50%;
+    }
+
+    @media (min-width: 768px) {
+        .search-input {
+            width: auto;
+        }
+    }
