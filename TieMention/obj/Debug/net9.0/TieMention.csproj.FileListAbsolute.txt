@@ -46,3 +46,5 @@ D:\Documents\GitHub\TieMentionApp\TieMention\bin\Debug\net9.0\Npgsql.dll
 D:\Documents\GitHub\TieMentionApp\TieMention\bin\Debug\net9.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 D:\Documents\GitHub\TieMentionApp\TieMention\obj\Debug\net9.0\TieMention.csproj.AssemblyReference.cache
 D:\Documents\GitHub\TieMentionApp\TieMention\obj\Debug\net9.0\TieMention.csproj.Up2Date
+D:\Documents\GitHub\TieMentionApp\TieMention\bin\Debug\net9.0\MediatR.dll
+D:\Documents\GitHub\TieMentionApp\TieMention\bin\Debug\net9.0\MediatR.Contracts.dll
