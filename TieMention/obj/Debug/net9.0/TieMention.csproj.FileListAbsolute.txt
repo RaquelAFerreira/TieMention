@@ -38,3 +38,11 @@ D:\Documents\GitHub\TieMentionApp\TieMention\obj\Debug\net9.0\scopedcss\Web\Comp
 D:\Documents\GitHub\TieMentionApp\TieMention\obj\Debug\net9.0\compressed\2h1qwouq7r-8cc7jchbhg.gz
 D:\Documents\GitHub\TieMentionApp\TieMention\obj\Debug\net9.0\compressed\u8j2msor7o-rkjyzayuor.gz
 D:\Documents\GitHub\TieMentionApp\TieMention\obj\Debug\net9.0\compressed\i9hvwa1pkk-rkjyzayuor.gz
+D:\Documents\GitHub\TieMentionApp\TieMention\obj\Debug\net9.0\TieMention.sourcelink.json
+D:\Documents\GitHub\TieMentionApp\TieMention\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.dll
+D:\Documents\GitHub\TieMentionApp\TieMention\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Documents\GitHub\TieMentionApp\TieMention\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Documents\GitHub\TieMentionApp\TieMention\bin\Debug\net9.0\Npgsql.dll
+D:\Documents\GitHub\TieMentionApp\TieMention\bin\Debug\net9.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+D:\Documents\GitHub\TieMentionApp\TieMention\obj\Debug\net9.0\TieMention.csproj.AssemblyReference.cache
+D:\Documents\GitHub\TieMentionApp\TieMention\obj\Debug\net9.0\TieMention.csproj.Up2Date
