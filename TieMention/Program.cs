@@ -1,16 +1,17 @@
 using TieMention.Web.Components;
-using MediatR;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
+var app = builder.Build();
+
 // builder.Services.AddMediatR(cfg => 
-//     cfg.RegisterServicesFromAssembly(typeof(CreateMentionCommand).Assembly));
+//     cfg.RegisterServicesFromAssembly(typeof(CreatePostCommand).Assembly));
 
 // builder.Services.AddInfrastructure(builder.Configuration);
-// var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
