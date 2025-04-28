@@ -16,7 +16,7 @@ public sealed class CreateMentionHandler : IRequestHandler<CreateMentionCommand,
     {
         // var mention = Mention.Create(command.Title, command.Content, command.AuthorId);
         // await _mentionRepository.AddAsync(mention);
-        // return Result.Success(mention.Id);
+        // return Result.Success(mention.Id); 
 
         return null;
     }
