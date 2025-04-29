@@ -1,0 +1,49 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\TieMention.bundle.scp.css",
+      "PackagePath": "staticwebassets\\TieMention.rkjyzayuor.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\wwwroot\\logo.png",
+      "PackagePath": "staticwebassets\\logo.png"
+    },
+    {
+      "Id": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\wwwroot\\logotm.png",
+      "PackagePath": "staticwebassets\\logotm.png"
+    },
+    {
+      "Id": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\wwwroot\\tiemention.png",
+      "PackagePath": "staticwebassets\\tiemention.png"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.TieMention.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.TieMention.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.build.TieMention.props",
+      "PackagePath": "build\\TieMention.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildMultiTargeting.TieMention.props",
+      "PackagePath": "buildMultiTargeting\\TieMention.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildTransitive.TieMention.props",
+      "PackagePath": "buildTransitive\\TieMention.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

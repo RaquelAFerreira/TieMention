@@ -1,0 +1,32 @@
+.rodape {
+    position: relative;
+    background-color: #000;
+    color: #74a814;
+    padding: 30px 20px;
+    text-align: center;
+    margin-top: 40px;
+    border-top: 2px solid #74a814; /* Linha separadora */
+}
+
+.rodape-conteudo {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.rodape p {
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    font-size: 24px;
+    color: #74a814;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #74a814;
+}
+

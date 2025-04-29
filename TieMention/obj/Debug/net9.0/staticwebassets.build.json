@@ -1,0 +1,1454 @@
+{
+  "Version": 1,
+  "Hash": "VtbbpQNAv972z8oRp5I6W/RRl1VOl/qRcV0QJ3ekmOU=",
+  "Source": "TieMention",
+  "BasePath": "_content/TieMention",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "TieMention\\wwwroot",
+      "Source": "TieMention",
+      "ContentRoot": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\wwwroot\\",
+      "BasePath": "_content/TieMention",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\obj\\Debug\\net9.0\\compressed\\2h1qwouq7r-8cc7jchbhg.gz",
+      "SourceId": "TieMention",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/TieMention",
+      "RelativePath": "app#[.{fingerprint=8cc7jchbhg}]?.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\wwwroot\\app.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "0a4x8q8c96",
+      "Integrity": "6MO9bbUcPatqNV8iDbkY8oYOhNYxJcoRDTFldDOPPI8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\wwwroot\\app.css"
+    },
+    {
+      "Identity": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\obj\\Debug\\net9.0\\compressed\\i9hvwa1pkk-rkjyzayuor.gz",
+      "SourceId": "TieMention",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/TieMention",
+      "RelativePath": "TieMention#[.{fingerprint=rkjyzayuor}]!.bundle.scp.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "Reference",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\TieMention.bundle.scp.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "65oer5xiqz",
+      "Integrity": "ujDLt5VihmxV8h9qUM2xy96z+f0my18TR7rFp9lMJwM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\TieMention.bundle.scp.css"
+    },
+    {
+      "Identity": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\obj\\Debug\\net9.0\\compressed\\u8j2msor7o-rkjyzayuor.gz",
+      "SourceId": "TieMention",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/TieMention",
+      "RelativePath": "TieMention#[.{fingerprint=rkjyzayuor}]?.styles.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "CurrentProject",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\obj\\Debug\\net9.0\\scopedcss\\bundle\\TieMention.styles.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "65oer5xiqz",
+      "Integrity": "ujDLt5VihmxV8h9qUM2xy96z+f0my18TR7rFp9lMJwM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\obj\\Debug\\net9.0\\scopedcss\\bundle\\TieMention.styles.css"
+    },
+    {
+      "Identity": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\obj\\Debug\\net9.0\\scopedcss\\bundle\\TieMention.styles.css",
+      "SourceId": "TieMention",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\obj\\Debug\\net9.0\\scopedcss\\bundle\\",
+      "BasePath": "_content/TieMention",
+      "RelativePath": "TieMention#[.{fingerprint}]?.styles.css",
+      "AssetKind": "All",
+      "AssetMode": "CurrentProject",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ApplicationBundle",
+      "Fingerprint": "rkjyzayuor",
+      "Integrity": "m6IDpmpfwLJKcuyIqTbiPzMmDePR7jFHOETeWkchQlc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\obj\\Debug\\net9.0\\scopedcss\\bundle\\TieMention.styles.css"
+    },
+    {
+      "Identity": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\TieMention.bundle.scp.css",
+      "SourceId": "TieMention",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\",
+      "BasePath": "_content/TieMention",
+      "RelativePath": "TieMention#[.{fingerprint}]!.bundle.scp.css",
+      "AssetKind": "All",
+      "AssetMode": "Reference",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ProjectBundle",
+      "Fingerprint": "rkjyzayuor",
+      "Integrity": "m6IDpmpfwLJKcuyIqTbiPzMmDePR7jFHOETeWkchQlc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\TieMention.bundle.scp.css"
+    },
+    {
+      "Identity": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\wwwroot\\app.css",
+      "SourceId": "TieMention",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\wwwroot\\",
+      "BasePath": "_content/TieMention",
+      "RelativePath": "app#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "8cc7jchbhg",
+      "Integrity": "OK3JF5K/1dUf+ZVosCD6fPbIIg76ObgaDfKhxbAE5/c=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\app.css"
+    },
+    {
+      "Identity": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\wwwroot\\favicon.png",
+      "SourceId": "TieMention",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\wwwroot\\",
+      "BasePath": "_content/TieMention",
+      "RelativePath": "favicon#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ifv42okdf2",
+      "Integrity": "4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\favicon.png"
+    },
+    {
+      "Identity": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\wwwroot\\logo.png",
+      "SourceId": "TieMention",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\wwwroot\\",
+      "BasePath": "_content/TieMention",
+      "RelativePath": "logo#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "wifkzao5m3",
+      "Integrity": "mLb8OvGiRboFsE1wook3uc4rg371zCqnX4aTGcEp/y0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\logo.png"
+    },
+    {
+      "Identity": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\wwwroot\\logotm.png",
+      "SourceId": "TieMention",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\wwwroot\\",
+      "BasePath": "_content/TieMention",
+      "RelativePath": "logotm#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "twd91rznmr",
+      "Integrity": "U3RHAu0XKMvi+Qo5/WB+d9OuS7f6U+WWzi9bnnzYzcM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\logotm.png"
+    },
+    {
+      "Identity": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\wwwroot\\tiemention.png",
+      "SourceId": "TieMention",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\wwwroot\\",
+      "BasePath": "_content/TieMention",
+      "RelativePath": "tiemention#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "nq8npv78a5",
+      "Integrity": "/5C0WHMFEEligNnhmme83NjdWPvJNvTJJJJvmwPIoL0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\tiemention.png"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "app.8cc7jchbhg.css",
+      "AssetFile": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\obj\\Debug\\net9.0\\compressed\\2h1qwouq7r-8cc7jchbhg.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.003236245955"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "308"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6MO9bbUcPatqNV8iDbkY8oYOhNYxJcoRDTFldDOPPI8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 26 Apr 2025 23:30:09 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"OK3JF5K/1dUf+ZVosCD6fPbIIg76ObgaDfKhxbAE5/c=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8cc7jchbhg"
+        },
+        {
+          "Name": "label",
+          "Value": "app.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-OK3JF5K/1dUf+ZVosCD6fPbIIg76ObgaDfKhxbAE5/c="
+        }
+      ]
+    },
+    {
+      "Route": "app.8cc7jchbhg.css",
+      "AssetFile": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\wwwroot\\app.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "738"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"OK3JF5K/1dUf+ZVosCD6fPbIIg76ObgaDfKhxbAE5/c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 26 Apr 2025 23:30:09 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8cc7jchbhg"
+        },
+        {
+          "Name": "label",
+          "Value": "app.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-OK3JF5K/1dUf+ZVosCD6fPbIIg76ObgaDfKhxbAE5/c="
+        }
+      ]
+    },
+    {
+      "Route": "app.8cc7jchbhg.css.gz",
+      "AssetFile": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\obj\\Debug\\net9.0\\compressed\\2h1qwouq7r-8cc7jchbhg.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "308"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6MO9bbUcPatqNV8iDbkY8oYOhNYxJcoRDTFldDOPPI8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 26 Apr 2025 23:30:09 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8cc7jchbhg"
+        },
+        {
+          "Name": "label",
+          "Value": "app.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-6MO9bbUcPatqNV8iDbkY8oYOhNYxJcoRDTFldDOPPI8="
+        }
+      ]
+    },
+    {
+      "Route": "app.css",
+      "AssetFile": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\obj\\Debug\\net9.0\\compressed\\2h1qwouq7r-8cc7jchbhg.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.003236245955"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "308"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6MO9bbUcPatqNV8iDbkY8oYOhNYxJcoRDTFldDOPPI8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 26 Apr 2025 23:30:09 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"OK3JF5K/1dUf+ZVosCD6fPbIIg76ObgaDfKhxbAE5/c=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-OK3JF5K/1dUf+ZVosCD6fPbIIg76ObgaDfKhxbAE5/c="
+        }
+      ]
+    },
+    {
+      "Route": "app.css",
+      "AssetFile": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\wwwroot\\app.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "738"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"OK3JF5K/1dUf+ZVosCD6fPbIIg76ObgaDfKhxbAE5/c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 26 Apr 2025 23:30:09 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-OK3JF5K/1dUf+ZVosCD6fPbIIg76ObgaDfKhxbAE5/c="
+        }
+      ]
+    },
+    {
+      "Route": "app.css.gz",
+      "AssetFile": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\obj\\Debug\\net9.0\\compressed\\2h1qwouq7r-8cc7jchbhg.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "308"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6MO9bbUcPatqNV8iDbkY8oYOhNYxJcoRDTFldDOPPI8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 26 Apr 2025 23:30:09 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-6MO9bbUcPatqNV8iDbkY8oYOhNYxJcoRDTFldDOPPI8="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.ifv42okdf2.png",
+      "AssetFile": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\wwwroot\\favicon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1148"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 22 Feb 2025 03:46:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ifv42okdf2"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.png",
+      "AssetFile": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\wwwroot\\favicon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1148"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 22 Feb 2025 03:46:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg="
+        }
+      ]
+    },
+    {
+      "Route": "logo.png",
+      "AssetFile": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\wwwroot\\logo.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "738"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mLb8OvGiRboFsE1wook3uc4rg371zCqnX4aTGcEp/y0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 12 Mar 2025 19:46:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-mLb8OvGiRboFsE1wook3uc4rg371zCqnX4aTGcEp/y0="
+        }
+      ]
+    },
+    {
+      "Route": "logo.wifkzao5m3.png",
+      "AssetFile": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\wwwroot\\logo.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "738"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mLb8OvGiRboFsE1wook3uc4rg371zCqnX4aTGcEp/y0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 12 Mar 2025 19:46:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wifkzao5m3"
+        },
+        {
+          "Name": "label",
+          "Value": "logo.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-mLb8OvGiRboFsE1wook3uc4rg371zCqnX4aTGcEp/y0="
+        }
+      ]
+    },
+    {
+      "Route": "logotm.png",
+      "AssetFile": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\wwwroot\\logotm.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7440"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"U3RHAu0XKMvi+Qo5/WB+d9OuS7f6U+WWzi9bnnzYzcM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 25 Apr 2025 23:58:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-U3RHAu0XKMvi+Qo5/WB+d9OuS7f6U+WWzi9bnnzYzcM="
+        }
+      ]
+    },
+    {
+      "Route": "logotm.twd91rznmr.png",
+      "AssetFile": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\wwwroot\\logotm.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7440"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"U3RHAu0XKMvi+Qo5/WB+d9OuS7f6U+WWzi9bnnzYzcM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 25 Apr 2025 23:58:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "twd91rznmr"
+        },
+        {
+          "Name": "label",
+          "Value": "logotm.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-U3RHAu0XKMvi+Qo5/WB+d9OuS7f6U+WWzi9bnnzYzcM="
+        }
+      ]
+    },
+    {
+      "Route": "TieMention.bundle.scp.css",
+      "AssetFile": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\obj\\Debug\\net9.0\\compressed\\i9hvwa1pkk-rkjyzayuor.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000589970501"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1694"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ujDLt5VihmxV8h9qUM2xy96z+f0my18TR7rFp9lMJwM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 26 Apr 2025 23:46:14 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"m6IDpmpfwLJKcuyIqTbiPzMmDePR7jFHOETeWkchQlc=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-m6IDpmpfwLJKcuyIqTbiPzMmDePR7jFHOETeWkchQlc="
+        }
+      ]
+    },
+    {
+      "Route": "TieMention.bundle.scp.css",
+      "AssetFile": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\TieMention.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7824"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"m6IDpmpfwLJKcuyIqTbiPzMmDePR7jFHOETeWkchQlc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 26 Apr 2025 23:46:14 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-m6IDpmpfwLJKcuyIqTbiPzMmDePR7jFHOETeWkchQlc="
+        }
+      ]
+    },
+    {
+      "Route": "TieMention.bundle.scp.css.gz",
+      "AssetFile": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\obj\\Debug\\net9.0\\compressed\\i9hvwa1pkk-rkjyzayuor.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1694"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ujDLt5VihmxV8h9qUM2xy96z+f0my18TR7rFp9lMJwM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 26 Apr 2025 23:46:14 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ujDLt5VihmxV8h9qUM2xy96z+f0my18TR7rFp9lMJwM="
+        }
+      ]
+    },
+    {
+      "Route": "tiemention.nq8npv78a5.png",
+      "AssetFile": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\wwwroot\\tiemention.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "436241"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/5C0WHMFEEligNnhmme83NjdWPvJNvTJJJJvmwPIoL0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 12 Mar 2025 15:38:25 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "nq8npv78a5"
+        },
+        {
+          "Name": "label",
+          "Value": "tiemention.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-/5C0WHMFEEligNnhmme83NjdWPvJNvTJJJJvmwPIoL0="
+        }
+      ]
+    },
+    {
+      "Route": "tiemention.png",
+      "AssetFile": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\wwwroot\\tiemention.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "436241"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/5C0WHMFEEligNnhmme83NjdWPvJNvTJJJJvmwPIoL0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 12 Mar 2025 15:38:25 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-/5C0WHMFEEligNnhmme83NjdWPvJNvTJJJJvmwPIoL0="
+        }
+      ]
+    },
+    {
+      "Route": "TieMention.rkjyzayuor.bundle.scp.css",
+      "AssetFile": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\obj\\Debug\\net9.0\\compressed\\i9hvwa1pkk-rkjyzayuor.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000589970501"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1694"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ujDLt5VihmxV8h9qUM2xy96z+f0my18TR7rFp9lMJwM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 26 Apr 2025 23:46:14 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"m6IDpmpfwLJKcuyIqTbiPzMmDePR7jFHOETeWkchQlc=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rkjyzayuor"
+        },
+        {
+          "Name": "label",
+          "Value": "TieMention.bundle.scp.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-m6IDpmpfwLJKcuyIqTbiPzMmDePR7jFHOETeWkchQlc="
+        }
+      ]
+    },
+    {
+      "Route": "TieMention.rkjyzayuor.bundle.scp.css",
+      "AssetFile": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\TieMention.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7824"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"m6IDpmpfwLJKcuyIqTbiPzMmDePR7jFHOETeWkchQlc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 26 Apr 2025 23:46:14 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rkjyzayuor"
+        },
+        {
+          "Name": "label",
+          "Value": "TieMention.bundle.scp.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-m6IDpmpfwLJKcuyIqTbiPzMmDePR7jFHOETeWkchQlc="
+        }
+      ]
+    },
+    {
+      "Route": "TieMention.rkjyzayuor.bundle.scp.css.gz",
+      "AssetFile": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\obj\\Debug\\net9.0\\compressed\\i9hvwa1pkk-rkjyzayuor.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1694"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ujDLt5VihmxV8h9qUM2xy96z+f0my18TR7rFp9lMJwM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 26 Apr 2025 23:46:14 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rkjyzayuor"
+        },
+        {
+          "Name": "label",
+          "Value": "TieMention.bundle.scp.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ujDLt5VihmxV8h9qUM2xy96z+f0my18TR7rFp9lMJwM="
+        }
+      ]
+    },
+    {
+      "Route": "TieMention.rkjyzayuor.styles.css",
+      "AssetFile": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\obj\\Debug\\net9.0\\compressed\\u8j2msor7o-rkjyzayuor.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000589970501"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1694"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ujDLt5VihmxV8h9qUM2xy96z+f0my18TR7rFp9lMJwM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 26 Apr 2025 23:46:14 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"m6IDpmpfwLJKcuyIqTbiPzMmDePR7jFHOETeWkchQlc=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rkjyzayuor"
+        },
+        {
+          "Name": "label",
+          "Value": "TieMention.styles.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-m6IDpmpfwLJKcuyIqTbiPzMmDePR7jFHOETeWkchQlc="
+        }
+      ]
+    },
+    {
+      "Route": "TieMention.rkjyzayuor.styles.css",
+      "AssetFile": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\obj\\Debug\\net9.0\\scopedcss\\bundle\\TieMention.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7824"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"m6IDpmpfwLJKcuyIqTbiPzMmDePR7jFHOETeWkchQlc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 26 Apr 2025 23:46:14 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rkjyzayuor"
+        },
+        {
+          "Name": "label",
+          "Value": "TieMention.styles.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-m6IDpmpfwLJKcuyIqTbiPzMmDePR7jFHOETeWkchQlc="
+        }
+      ]
+    },
+    {
+      "Route": "TieMention.rkjyzayuor.styles.css.gz",
+      "AssetFile": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\obj\\Debug\\net9.0\\compressed\\u8j2msor7o-rkjyzayuor.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1694"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ujDLt5VihmxV8h9qUM2xy96z+f0my18TR7rFp9lMJwM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 26 Apr 2025 23:46:14 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rkjyzayuor"
+        },
+        {
+          "Name": "label",
+          "Value": "TieMention.styles.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ujDLt5VihmxV8h9qUM2xy96z+f0my18TR7rFp9lMJwM="
+        }
+      ]
+    },
+    {
+      "Route": "TieMention.styles.css",
+      "AssetFile": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\obj\\Debug\\net9.0\\compressed\\u8j2msor7o-rkjyzayuor.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000589970501"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1694"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ujDLt5VihmxV8h9qUM2xy96z+f0my18TR7rFp9lMJwM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 26 Apr 2025 23:46:14 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"m6IDpmpfwLJKcuyIqTbiPzMmDePR7jFHOETeWkchQlc=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-m6IDpmpfwLJKcuyIqTbiPzMmDePR7jFHOETeWkchQlc="
+        }
+      ]
+    },
+    {
+      "Route": "TieMention.styles.css",
+      "AssetFile": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\obj\\Debug\\net9.0\\scopedcss\\bundle\\TieMention.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7824"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"m6IDpmpfwLJKcuyIqTbiPzMmDePR7jFHOETeWkchQlc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 26 Apr 2025 23:46:14 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-m6IDpmpfwLJKcuyIqTbiPzMmDePR7jFHOETeWkchQlc="
+        }
+      ]
+    },
+    {
+      "Route": "TieMention.styles.css.gz",
+      "AssetFile": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\obj\\Debug\\net9.0\\compressed\\u8j2msor7o-rkjyzayuor.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1694"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ujDLt5VihmxV8h9qUM2xy96z+f0my18TR7rFp9lMJwM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 26 Apr 2025 23:46:14 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ujDLt5VihmxV8h9qUM2xy96z+f0my18TR7rFp9lMJwM="
+        }
+      ]
+    }
+  ]
+}

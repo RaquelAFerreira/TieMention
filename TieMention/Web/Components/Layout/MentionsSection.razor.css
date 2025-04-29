@@ -1,0 +1,35 @@
+
+/* Mentions section styles */
+.mentions-section {
+    margin-top: 50px;
+}
+
+@media (min-width: 768px) {
+    .mentions-section {
+        margin-top: 100px;
+    }
+}
+
+.mentions-title {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .mentions-title {
+        font-size: 3.125rem;
+    }
+}
+
+.mentions-subtitle {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-top: 1.25rem;
+}
+
+@media (min-width: 768px) {
+    .mentions-subtitle {
+        font-size: 2.5rem;
+    }
+}
