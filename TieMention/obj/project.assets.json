@@ -752,11 +752,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\TieMention.csproj",
+      "projectUniqueName": "C:\\TieMention\\TieMention\\TieMention\\TieMention.csproj",
       "projectName": "TieMention",
-      "projectPath": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\TieMention.csproj",
+      "projectPath": "C:\\TieMention\\TieMention\\TieMention\\TieMention.csproj",
       "packagesPath": "C:\\Users\\efrai\\.nuget\\packages\\",
-      "outputPath": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\obj\\",
+      "outputPath": "C:\\TieMention\\TieMention\\TieMention\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\efrai\\AppData\\Roaming\\NuGet\\NuGet.Config",

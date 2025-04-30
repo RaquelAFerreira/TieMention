@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\TieMention.csproj": {}
+    "C:\\TieMention\\TieMention\\tiemention\\TieMention.csproj": {}
   },
   "projects": {
-    "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\TieMention.csproj": {
+    "C:\\TieMention\\TieMention\\tiemention\\TieMention.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\TieMention.csproj",
+        "projectUniqueName": "C:\\TieMention\\TieMention\\tiemention\\TieMention.csproj",
         "projectName": "TieMention",
-        "projectPath": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\TieMention.csproj",
+        "projectPath": "C:\\TieMention\\TieMention\\tiemention\\TieMention.csproj",
         "packagesPath": "C:\\Users\\efrai\\.nuget\\packages\\",
-        "outputPath": "D:\\Documents\\GitHub\\TieMentionApp\\TieMention\\obj\\",
+        "outputPath": "C:\\TieMention\\TieMention\\tiemention\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\efrai\\AppData\\Roaming\\NuGet\\NuGet.Config",
