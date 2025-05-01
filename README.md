@@ -37,8 +37,8 @@ Configuração do Ambiente de Desenvolvimento ⚙️
     Clone o repositório:
     bash
 
-git clone https://github.com/seu-usuario/ObraMentions.git
-cd ObraMentions
+git clone https://github.com/RaquelAFerreira/TieMention.git
+cd TieMention
 
 Restaure as dependências:
 bash
