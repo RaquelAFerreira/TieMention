@@ -1,6 +1,7 @@
 # TieMention 🎬📚🎵
 
 Um site inspirado no conceito do WhoSampled, mas focado em rastrear e catalogar menções de obras em outras obras através de diferentes mídias como filmes, séries, desenhos animados, livros, músicas e muito mais.
+
 Tecnologias Utilizadas 🛠️
 
     .NET 9 - Framework principal para desenvolvimento backend
