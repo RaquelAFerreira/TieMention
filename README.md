@@ -38,6 +38,7 @@ Configuração do Ambiente de Desenvolvimento ⚙️
     bash
 
 git clone https://github.com/RaquelAFerreira/TieMention.git
+
 cd TieMention
 
 Restaure as dependências:
