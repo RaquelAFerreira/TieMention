@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TieMention")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e7135ed2bf223d22f4a9a15caa821a4cfdcc93d6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6bb44992bc6c2a4301a0db382f2f9e1d0d167d3f")]
 [assembly: System.Reflection.AssemblyProductAttribute("TieMention")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TieMention")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
