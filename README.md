@@ -1,6 +1,6 @@
 # TieMention 🎬📚🎵
 
-Em Construção... ██▓░️░️░️░️░️░️░️
+██▓░️░️░️░️░️░️░️ Em Construção...
 
 Um site inspirado no conceito do WhoSampled, mas focado em rastrear e catalogar menções de obras em outras obras através de diferentes mídias como filmes, séries, desenhos animados, livros, músicas e muito mais.
 
@@ -63,7 +63,7 @@ bash
     dotnet run
 ///------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------///
 
-**Under Construction... ██▓░️░️░️░️░️░️░️**  
+██▓░️░️░️░️░️░️░️ Under Construction...  
 
 A site inspired by the WhoSampled concept, but focused on tracking and cataloging mentions of works in other works across different media such as movies, TV shows, cartoons, books, music, and more.  
 
