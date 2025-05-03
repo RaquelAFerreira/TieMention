@@ -80,7 +80,6 @@ C:\TieMention\TieMention\tiemention\obj\Debug\net9.0\scopedcss\Web\Components\La
 C:\TieMention\TieMention\tiemention\obj\Debug\net9.0\scopedcss\Web\Components\Layout\SearchBar.razor.rz.scp.css
 C:\TieMention\TieMention\tiemention\obj\Debug\net9.0\scopedcss\bundle\TieMention.styles.css
 C:\TieMention\TieMention\tiemention\obj\Debug\net9.0\scopedcss\projectbundle\TieMention.bundle.scp.css
-C:\TieMention\TieMention\tiemention\obj\Debug\net9.0\compressed\2h1qwouq7r-8cc7jchbhg.gz
 C:\TieMention\TieMention\tiemention\obj\Debug\net9.0\staticwebassets.build.json
 C:\TieMention\TieMention\tiemention\obj\Debug\net9.0\staticwebassets.development.json
 C:\TieMention\TieMention\tiemention\obj\Debug\net9.0\staticwebassets.build.endpoints.json
@@ -96,5 +95,6 @@ C:\TieMention\TieMention\tiemention\obj\Debug\net9.0\refint\TieMention.dll
 C:\TieMention\TieMention\tiemention\obj\Debug\net9.0\TieMention.pdb
 C:\TieMention\TieMention\tiemention\obj\Debug\net9.0\TieMention.genruntimeconfig.cache
 C:\TieMention\TieMention\tiemention\obj\Debug\net9.0\ref\TieMention.dll
-C:\TieMention\TieMention\tiemention\obj\Debug\net9.0\compressed\u8j2msor7o-wolrk540x9.gz
-C:\TieMention\TieMention\tiemention\obj\Debug\net9.0\compressed\i9hvwa1pkk-wolrk540x9.gz
+C:\TieMention\TieMention\tiemention\obj\Debug\net9.0\compressed\2h1qwouq7r-tq9u790njf.gz
+C:\TieMention\TieMention\tiemention\obj\Debug\net9.0\compressed\u8j2msor7o-zpd641cd3a.gz
+C:\TieMention\TieMention\tiemention\obj\Debug\net9.0\compressed\i9hvwa1pkk-zpd641cd3a.gz
