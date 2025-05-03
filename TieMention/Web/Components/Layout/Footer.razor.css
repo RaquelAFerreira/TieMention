@@ -1,4 +1,4 @@
-.rodape {
+.main-footer {
     position: relative;
     background-color: #000;
     color: #74a814;
@@ -8,12 +8,12 @@
     border-top: 2px solid #74a814; /* Linha separadora */
 }
 
-.rodape-conteudo {
+.footer-content {
     max-width: 1200px;
     margin: auto;
 }
 
-.rodape p {
+.main-footer p {
     margin-bottom: 15px;
     letter-spacing: 1px;
     font-size: 14px;

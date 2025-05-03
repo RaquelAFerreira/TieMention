@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "5ZP7JymsYAcA4NLrqFohsakL9uWksUOvRWEhBRlO4J4=",
+  "Hash": "9W+/27RfCbq1MVEYa6aeDC6yJey03FeOBtHW6k/ERyo=",
   "Source": "TieMention",
   "BasePath": "_content/TieMention",
   "Mode": "Default",
@@ -38,12 +38,12 @@
       "OriginalItemSpec": "C:\\TieMention\\TieMention\\tiemention\\wwwroot\\app.css"
     },
     {
-      "Identity": "C:\\TieMention\\TieMention\\tiemention\\obj\\Debug\\net9.0\\compressed\\i9hvwa1pkk-e9k1dpmxgq.gz",
+      "Identity": "C:\\TieMention\\TieMention\\tiemention\\obj\\Debug\\net9.0\\compressed\\i9hvwa1pkk-zpd641cd3a.gz",
       "SourceId": "TieMention",
       "SourceType": "Computed",
       "ContentRoot": "C:\\TieMention\\TieMention\\tiemention\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/TieMention",
-      "RelativePath": "TieMention#[.{fingerprint=e9k1dpmxgq}]!.bundle.scp.css.gz",
+      "RelativePath": "TieMention#[.{fingerprint=zpd641cd3a}]!.bundle.scp.css.gz",
       "AssetKind": "All",
       "AssetMode": "Reference",
       "AssetRole": "Alternative",
@@ -52,19 +52,19 @@
       "RelatedAsset": "C:\\TieMention\\TieMention\\tiemention\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\TieMention.bundle.scp.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "dovef15wfu",
-      "Integrity": "IwVg/61+yZD/K1nMukBgrJtzYr99trlgYmV6IOM0iVk=",
+      "Fingerprint": "f0nbopq932",
+      "Integrity": "P0UsNZ5dA6h4jDHje6rOvXUW9lm+2SV4I1V94JUJI3M=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\TieMention\\TieMention\\tiemention\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\TieMention.bundle.scp.css"
     },
     {
-      "Identity": "C:\\TieMention\\TieMention\\tiemention\\obj\\Debug\\net9.0\\compressed\\u8j2msor7o-e9k1dpmxgq.gz",
+      "Identity": "C:\\TieMention\\TieMention\\tiemention\\obj\\Debug\\net9.0\\compressed\\u8j2msor7o-zpd641cd3a.gz",
       "SourceId": "TieMention",
       "SourceType": "Computed",
       "ContentRoot": "C:\\TieMention\\TieMention\\tiemention\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/TieMention",
-      "RelativePath": "TieMention#[.{fingerprint=e9k1dpmxgq}]?.styles.css.gz",
+      "RelativePath": "TieMention#[.{fingerprint=zpd641cd3a}]?.styles.css.gz",
       "AssetKind": "All",
       "AssetMode": "CurrentProject",
       "AssetRole": "Alternative",
@@ -73,8 +73,8 @@
       "RelatedAsset": "C:\\TieMention\\TieMention\\tiemention\\obj\\Debug\\net9.0\\scopedcss\\bundle\\TieMention.styles.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "dovef15wfu",
-      "Integrity": "IwVg/61+yZD/K1nMukBgrJtzYr99trlgYmV6IOM0iVk=",
+      "Fingerprint": "f0nbopq932",
+      "Integrity": "P0UsNZ5dA6h4jDHje6rOvXUW9lm+2SV4I1V94JUJI3M=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\TieMention\\TieMention\\tiemention\\obj\\Debug\\net9.0\\scopedcss\\bundle\\TieMention.styles.css"
@@ -94,8 +94,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
-      "Fingerprint": "e9k1dpmxgq",
-      "Integrity": "0u0BqorKrLM6NReAKsdzUUQWiZIxURZWhEiOd5BYv88=",
+      "Fingerprint": "zpd641cd3a",
+      "Integrity": "97JOdrLSpERg8JyVP63FHO692XRyG0VAQPzNyuW7Vh8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\TieMention\\TieMention\\tiemention\\obj\\Debug\\net9.0\\scopedcss\\bundle\\TieMention.styles.css"
@@ -115,8 +115,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
-      "Fingerprint": "e9k1dpmxgq",
-      "Integrity": "0u0BqorKrLM6NReAKsdzUUQWiZIxURZWhEiOd5BYv88=",
+      "Fingerprint": "zpd641cd3a",
+      "Integrity": "97JOdrLSpERg8JyVP63FHO692XRyG0VAQPzNyuW7Vh8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\TieMention\\TieMention\\tiemention\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\TieMention.bundle.scp.css"
@@ -774,12 +774,12 @@
     },
     {
       "Route": "TieMention.bundle.scp.css",
-      "AssetFile": "C:\\TieMention\\TieMention\\tiemention\\obj\\Debug\\net9.0\\compressed\\i9hvwa1pkk-e9k1dpmxgq.gz",
+      "AssetFile": "C:\\TieMention\\TieMention\\tiemention\\obj\\Debug\\net9.0\\compressed\\i9hvwa1pkk-zpd641cd3a.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000521920668"
+          "Quality": "0.000558347292"
         }
       ],
       "ResponseHeaders": [
@@ -789,15 +789,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1915"
+          "Value": "1790"
         },
         {
           "Name": "ETag",
-          "Value": "\"IwVg/61+yZD/K1nMukBgrJtzYr99trlgYmV6IOM0iVk=\""
+          "Value": "\"P0UsNZ5dA6h4jDHje6rOvXUW9lm+2SV4I1V94JUJI3M=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 May 2025 22:16:46 GMT"
+          "Value": "Sat, 03 May 2025 22:23:40 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -817,13 +817,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"0u0BqorKrLM6NReAKsdzUUQWiZIxURZWhEiOd5BYv88=\""
+          "Value": "W/\"97JOdrLSpERg8JyVP63FHO692XRyG0VAQPzNyuW7Vh8=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-0u0BqorKrLM6NReAKsdzUUQWiZIxURZWhEiOd5BYv88="
+          "Value": "sha256-97JOdrLSpERg8JyVP63FHO692XRyG0VAQPzNyuW7Vh8="
         }
       ]
     },
@@ -838,7 +838,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "8612"
+          "Value": "7782"
         },
         {
           "Name": "Content-Type",
@@ -846,11 +846,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"0u0BqorKrLM6NReAKsdzUUQWiZIxURZWhEiOd5BYv88=\""
+          "Value": "\"97JOdrLSpERg8JyVP63FHO692XRyG0VAQPzNyuW7Vh8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 May 2025 22:16:46 GMT"
+          "Value": "Sat, 03 May 2025 22:23:40 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -860,13 +860,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-0u0BqorKrLM6NReAKsdzUUQWiZIxURZWhEiOd5BYv88="
+          "Value": "sha256-97JOdrLSpERg8JyVP63FHO692XRyG0VAQPzNyuW7Vh8="
         }
       ]
     },
     {
       "Route": "TieMention.bundle.scp.css.gz",
-      "AssetFile": "C:\\TieMention\\TieMention\\tiemention\\obj\\Debug\\net9.0\\compressed\\i9hvwa1pkk-e9k1dpmxgq.gz",
+      "AssetFile": "C:\\TieMention\\TieMention\\tiemention\\obj\\Debug\\net9.0\\compressed\\i9hvwa1pkk-zpd641cd3a.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -875,7 +875,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1915"
+          "Value": "1790"
         },
         {
           "Name": "Content-Type",
@@ -883,11 +883,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"IwVg/61+yZD/K1nMukBgrJtzYr99trlgYmV6IOM0iVk=\""
+          "Value": "\"P0UsNZ5dA6h4jDHje6rOvXUW9lm+2SV4I1V94JUJI3M=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 May 2025 22:16:46 GMT"
+          "Value": "Sat, 03 May 2025 22:23:40 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -905,329 +905,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-IwVg/61+yZD/K1nMukBgrJtzYr99trlgYmV6IOM0iVk="
-        }
-      ]
-    },
-    {
-      "Route": "TieMention.e9k1dpmxgq.bundle.scp.css",
-      "AssetFile": "C:\\TieMention\\TieMention\\tiemention\\obj\\Debug\\net9.0\\compressed\\i9hvwa1pkk-e9k1dpmxgq.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000521920668"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1915"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"IwVg/61+yZD/K1nMukBgrJtzYr99trlgYmV6IOM0iVk=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 03 May 2025 22:16:46 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"0u0BqorKrLM6NReAKsdzUUQWiZIxURZWhEiOd5BYv88=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "e9k1dpmxgq"
-        },
-        {
-          "Name": "label",
-          "Value": "TieMention.bundle.scp.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-0u0BqorKrLM6NReAKsdzUUQWiZIxURZWhEiOd5BYv88="
-        }
-      ]
-    },
-    {
-      "Route": "TieMention.e9k1dpmxgq.bundle.scp.css",
-      "AssetFile": "C:\\TieMention\\TieMention\\tiemention\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\TieMention.bundle.scp.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "8612"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"0u0BqorKrLM6NReAKsdzUUQWiZIxURZWhEiOd5BYv88=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 03 May 2025 22:16:46 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "e9k1dpmxgq"
-        },
-        {
-          "Name": "label",
-          "Value": "TieMention.bundle.scp.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-0u0BqorKrLM6NReAKsdzUUQWiZIxURZWhEiOd5BYv88="
-        }
-      ]
-    },
-    {
-      "Route": "TieMention.e9k1dpmxgq.bundle.scp.css.gz",
-      "AssetFile": "C:\\TieMention\\TieMention\\tiemention\\obj\\Debug\\net9.0\\compressed\\i9hvwa1pkk-e9k1dpmxgq.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1915"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"IwVg/61+yZD/K1nMukBgrJtzYr99trlgYmV6IOM0iVk=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 03 May 2025 22:16:46 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "e9k1dpmxgq"
-        },
-        {
-          "Name": "label",
-          "Value": "TieMention.bundle.scp.css.gz"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-IwVg/61+yZD/K1nMukBgrJtzYr99trlgYmV6IOM0iVk="
-        }
-      ]
-    },
-    {
-      "Route": "TieMention.e9k1dpmxgq.styles.css",
-      "AssetFile": "C:\\TieMention\\TieMention\\tiemention\\obj\\Debug\\net9.0\\compressed\\u8j2msor7o-e9k1dpmxgq.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000521920668"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1915"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"IwVg/61+yZD/K1nMukBgrJtzYr99trlgYmV6IOM0iVk=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 03 May 2025 22:16:46 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"0u0BqorKrLM6NReAKsdzUUQWiZIxURZWhEiOd5BYv88=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "e9k1dpmxgq"
-        },
-        {
-          "Name": "label",
-          "Value": "TieMention.styles.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-0u0BqorKrLM6NReAKsdzUUQWiZIxURZWhEiOd5BYv88="
-        }
-      ]
-    },
-    {
-      "Route": "TieMention.e9k1dpmxgq.styles.css",
-      "AssetFile": "C:\\TieMention\\TieMention\\tiemention\\obj\\Debug\\net9.0\\scopedcss\\bundle\\TieMention.styles.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "8612"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"0u0BqorKrLM6NReAKsdzUUQWiZIxURZWhEiOd5BYv88=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 03 May 2025 22:16:46 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "e9k1dpmxgq"
-        },
-        {
-          "Name": "label",
-          "Value": "TieMention.styles.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-0u0BqorKrLM6NReAKsdzUUQWiZIxURZWhEiOd5BYv88="
-        }
-      ]
-    },
-    {
-      "Route": "TieMention.e9k1dpmxgq.styles.css.gz",
-      "AssetFile": "C:\\TieMention\\TieMention\\tiemention\\obj\\Debug\\net9.0\\compressed\\u8j2msor7o-e9k1dpmxgq.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1915"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"IwVg/61+yZD/K1nMukBgrJtzYr99trlgYmV6IOM0iVk=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 03 May 2025 22:16:46 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "e9k1dpmxgq"
-        },
-        {
-          "Name": "label",
-          "Value": "TieMention.styles.css.gz"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-IwVg/61+yZD/K1nMukBgrJtzYr99trlgYmV6IOM0iVk="
+          "Value": "sha256-P0UsNZ5dA6h4jDHje6rOvXUW9lm+2SV4I1V94JUJI3M="
         }
       ]
     },
@@ -1315,12 +993,12 @@
     },
     {
       "Route": "TieMention.styles.css",
-      "AssetFile": "C:\\TieMention\\TieMention\\tiemention\\obj\\Debug\\net9.0\\compressed\\u8j2msor7o-e9k1dpmxgq.gz",
+      "AssetFile": "C:\\TieMention\\TieMention\\tiemention\\obj\\Debug\\net9.0\\compressed\\u8j2msor7o-zpd641cd3a.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000521920668"
+          "Quality": "0.000558347292"
         }
       ],
       "ResponseHeaders": [
@@ -1330,15 +1008,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1915"
+          "Value": "1790"
         },
         {
           "Name": "ETag",
-          "Value": "\"IwVg/61+yZD/K1nMukBgrJtzYr99trlgYmV6IOM0iVk=\""
+          "Value": "\"P0UsNZ5dA6h4jDHje6rOvXUW9lm+2SV4I1V94JUJI3M=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 May 2025 22:16:46 GMT"
+          "Value": "Sat, 03 May 2025 22:23:40 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1358,13 +1036,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"0u0BqorKrLM6NReAKsdzUUQWiZIxURZWhEiOd5BYv88=\""
+          "Value": "W/\"97JOdrLSpERg8JyVP63FHO692XRyG0VAQPzNyuW7Vh8=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-0u0BqorKrLM6NReAKsdzUUQWiZIxURZWhEiOd5BYv88="
+          "Value": "sha256-97JOdrLSpERg8JyVP63FHO692XRyG0VAQPzNyuW7Vh8="
         }
       ]
     },
@@ -1379,7 +1057,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "8612"
+          "Value": "7782"
         },
         {
           "Name": "Content-Type",
@@ -1387,11 +1065,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"0u0BqorKrLM6NReAKsdzUUQWiZIxURZWhEiOd5BYv88=\""
+          "Value": "\"97JOdrLSpERg8JyVP63FHO692XRyG0VAQPzNyuW7Vh8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 May 2025 22:16:46 GMT"
+          "Value": "Sat, 03 May 2025 22:23:40 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1401,13 +1079,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-0u0BqorKrLM6NReAKsdzUUQWiZIxURZWhEiOd5BYv88="
+          "Value": "sha256-97JOdrLSpERg8JyVP63FHO692XRyG0VAQPzNyuW7Vh8="
         }
       ]
     },
     {
       "Route": "TieMention.styles.css.gz",
-      "AssetFile": "C:\\TieMention\\TieMention\\tiemention\\obj\\Debug\\net9.0\\compressed\\u8j2msor7o-e9k1dpmxgq.gz",
+      "AssetFile": "C:\\TieMention\\TieMention\\tiemention\\obj\\Debug\\net9.0\\compressed\\u8j2msor7o-zpd641cd3a.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1416,7 +1094,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1915"
+          "Value": "1790"
         },
         {
           "Name": "Content-Type",
@@ -1424,11 +1102,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"IwVg/61+yZD/K1nMukBgrJtzYr99trlgYmV6IOM0iVk=\""
+          "Value": "\"P0UsNZ5dA6h4jDHje6rOvXUW9lm+2SV4I1V94JUJI3M=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 May 2025 22:16:46 GMT"
+          "Value": "Sat, 03 May 2025 22:23:40 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1446,7 +1124,329 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-IwVg/61+yZD/K1nMukBgrJtzYr99trlgYmV6IOM0iVk="
+          "Value": "sha256-P0UsNZ5dA6h4jDHje6rOvXUW9lm+2SV4I1V94JUJI3M="
+        }
+      ]
+    },
+    {
+      "Route": "TieMention.zpd641cd3a.bundle.scp.css",
+      "AssetFile": "C:\\TieMention\\TieMention\\tiemention\\obj\\Debug\\net9.0\\compressed\\i9hvwa1pkk-zpd641cd3a.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000558347292"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1790"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"P0UsNZ5dA6h4jDHje6rOvXUW9lm+2SV4I1V94JUJI3M=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 03 May 2025 22:23:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"97JOdrLSpERg8JyVP63FHO692XRyG0VAQPzNyuW7Vh8=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "zpd641cd3a"
+        },
+        {
+          "Name": "label",
+          "Value": "TieMention.bundle.scp.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-97JOdrLSpERg8JyVP63FHO692XRyG0VAQPzNyuW7Vh8="
+        }
+      ]
+    },
+    {
+      "Route": "TieMention.zpd641cd3a.bundle.scp.css",
+      "AssetFile": "C:\\TieMention\\TieMention\\tiemention\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\TieMention.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7782"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"97JOdrLSpERg8JyVP63FHO692XRyG0VAQPzNyuW7Vh8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 03 May 2025 22:23:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "zpd641cd3a"
+        },
+        {
+          "Name": "label",
+          "Value": "TieMention.bundle.scp.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-97JOdrLSpERg8JyVP63FHO692XRyG0VAQPzNyuW7Vh8="
+        }
+      ]
+    },
+    {
+      "Route": "TieMention.zpd641cd3a.bundle.scp.css.gz",
+      "AssetFile": "C:\\TieMention\\TieMention\\tiemention\\obj\\Debug\\net9.0\\compressed\\i9hvwa1pkk-zpd641cd3a.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1790"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"P0UsNZ5dA6h4jDHje6rOvXUW9lm+2SV4I1V94JUJI3M=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 03 May 2025 22:23:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "zpd641cd3a"
+        },
+        {
+          "Name": "label",
+          "Value": "TieMention.bundle.scp.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-P0UsNZ5dA6h4jDHje6rOvXUW9lm+2SV4I1V94JUJI3M="
+        }
+      ]
+    },
+    {
+      "Route": "TieMention.zpd641cd3a.styles.css",
+      "AssetFile": "C:\\TieMention\\TieMention\\tiemention\\obj\\Debug\\net9.0\\compressed\\u8j2msor7o-zpd641cd3a.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000558347292"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1790"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"P0UsNZ5dA6h4jDHje6rOvXUW9lm+2SV4I1V94JUJI3M=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 03 May 2025 22:23:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"97JOdrLSpERg8JyVP63FHO692XRyG0VAQPzNyuW7Vh8=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "zpd641cd3a"
+        },
+        {
+          "Name": "label",
+          "Value": "TieMention.styles.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-97JOdrLSpERg8JyVP63FHO692XRyG0VAQPzNyuW7Vh8="
+        }
+      ]
+    },
+    {
+      "Route": "TieMention.zpd641cd3a.styles.css",
+      "AssetFile": "C:\\TieMention\\TieMention\\tiemention\\obj\\Debug\\net9.0\\scopedcss\\bundle\\TieMention.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7782"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"97JOdrLSpERg8JyVP63FHO692XRyG0VAQPzNyuW7Vh8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 03 May 2025 22:23:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "zpd641cd3a"
+        },
+        {
+          "Name": "label",
+          "Value": "TieMention.styles.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-97JOdrLSpERg8JyVP63FHO692XRyG0VAQPzNyuW7Vh8="
+        }
+      ]
+    },
+    {
+      "Route": "TieMention.zpd641cd3a.styles.css.gz",
+      "AssetFile": "C:\\TieMention\\TieMention\\tiemention\\obj\\Debug\\net9.0\\compressed\\u8j2msor7o-zpd641cd3a.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1790"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"P0UsNZ5dA6h4jDHje6rOvXUW9lm+2SV4I1V94JUJI3M=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 03 May 2025 22:23:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "zpd641cd3a"
+        },
+        {
+          "Name": "label",
+          "Value": "TieMention.styles.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-P0UsNZ5dA6h4jDHje6rOvXUW9lm+2SV4I1V94JUJI3M="
         }
       ]
     }

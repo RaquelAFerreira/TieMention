@@ -1,4 +1,4 @@
-.rodape[b-a5ewijqhed] {
+.main-footer[b-a5ewijqhed] {
     position: relative;
     background-color: #000;
     color: #74a814;
@@ -8,12 +8,12 @@
     border-top: 2px solid #74a814; /* Linha separadora */
 }
 
-.rodape-conteudo[b-a5ewijqhed] {
+.footer-content[b-a5ewijqhed] {
     max-width: 1200px;
     margin: auto;
 }
 
-.rodape p[b-a5ewijqhed] {
+.main-footer p[b-a5ewijqhed] {
     margin-bottom: 15px;
     letter-spacing: 1px;
     font-size: 14px;
