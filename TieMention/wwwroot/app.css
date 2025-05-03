@@ -15,23 +15,19 @@
   }
 } */
 
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    margin-top: 70px;
+}
 
-
-
-    /* Main content styles */
+@media (min-width: 768px) {
     .main-content {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 1rem;
-        font-size: 1.125rem;
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+        font-size: 1.25rem;
         line-height: 1.75rem;
-        margin-top: 70px;
     }
-
-    @media (min-width: 768px) {
-        .main-content {
-            grid-template-columns: repeat(12, minmax(0, 1fr));
-            font-size: 1.25rem;
-            line-height: 1.75rem;
-        }
-    }
+}
