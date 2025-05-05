@@ -5,7 +5,6 @@
     align-items: center;
     height: 200px;
     width: 620px;
-    padding: 1rem;
 }
 
 @media (min-width: 768px) {
@@ -72,13 +71,24 @@
     margin: 20px auto;
 }
 
+
 .analog-button-container {
     display: flex;
-    justify-content: right;
+    justify-content: right; 
     gap: 10px;
-    margin-top: -40px;
-    padding-right: 200px;
-    width: 100%;
+    margin-top: -30px; 
+    margin-left: 20px; 
+    width: calc(100% - 40px); 
+    position: relative;
+}
+
+/* Mantenha o restante do seu CSS igual */
+
+@media (min-width: 768px) {
+    .analog-button-container {
+        margin-top: -40px; 
+        width: 560px;
+    }
 }
 
 .analog-button {

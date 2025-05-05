@@ -10,8 +10,9 @@ namespace TieMention.Infrastructure.Extensions;
 public static class ServiceCollectionExtensions
 {
     public static IServiceCollection AddInfrastructure(
-        this IServiceCollection services, 
-        IConfiguration configuration)
+        this IServiceCollection services,
+        IConfiguration configuration
+    )
     {
         services.AddDbContext<AppDbContext>(options =>
         {
