@@ -9,7 +9,7 @@ builder.Services.AddRazorComponents()
 var app = builder.Build();
 
 // builder.Services.AddMediatR(cfg => 
-//     cfg.RegisterServicesFromAssembly(typeof(CreatePostCommand).Assembly));
+//     cfg.RegisterServicesFromAssembly(typeof(CreateMentionCommand).Assembly));
 
 // builder.Services.AddInfrastructure(builder.Configuration);
 
