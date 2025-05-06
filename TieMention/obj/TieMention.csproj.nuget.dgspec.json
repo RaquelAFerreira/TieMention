@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\TieMention\\TieMention\\tiemention\\TieMention.csproj": {}
+    "C:\\TieMention\\TieMention\\TieMention\\TieMention.csproj": {}
   },
   "projects": {
-    "C:\\TieMention\\TieMention\\tiemention\\TieMention.csproj": {
+    "C:\\TieMention\\TieMention\\TieMention\\TieMention.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\TieMention\\TieMention\\tiemention\\TieMention.csproj",
+        "projectUniqueName": "C:\\TieMention\\TieMention\\TieMention\\TieMention.csproj",
         "projectName": "TieMention",
-        "projectPath": "C:\\TieMention\\TieMention\\tiemention\\TieMention.csproj",
+        "projectPath": "C:\\TieMention\\TieMention\\TieMention\\TieMention.csproj",
         "packagesPath": "C:\\Users\\efrai\\.nuget\\packages\\",
-        "outputPath": "C:\\TieMention\\TieMention\\tiemention\\obj\\",
+        "outputPath": "C:\\TieMention\\TieMention\\TieMention\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\efrai\\AppData\\Roaming\\NuGet\\NuGet.Config",
