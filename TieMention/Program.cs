@@ -1,4 +1,10 @@
 using TieMention.Web.Components;
+using TieMention.Application.Interfaces;
+using TieMention.Api.Controllers;
+using TieMention.Infrastructure;
+using TieMention.Infrastructure.Persistence;
+using Microsoft.EntityFrameworkCore;
+using TieMention.Application.Mentions.Queries;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,26 +12,37 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
+// Configuração do banco de dados com PostgreSQL
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("Default")));
+
+// Registro do repositório genérico
+builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+
+// Registro do MediatR (um só é suficiente para toda a aplicação)
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblyContaining<GetMentionHandler>());
+
+// Registro do controller API (caso esteja servindo API junto do WebApp)
+builder.Services.AddControllers();
+
+// ✅ HttpClient configurado com endereço base da API
+builder.Services.AddHttpClient("TieMentionApi", client =>
+{
+    client.BaseAddress = new Uri("https://localhost:5000/"); // ajuste para a porta real da API
+});
+
+// ✅ HttpClient padrão que será injetado com @inject HttpClient Http
+builder.Services.AddScoped(sp => sp.GetRequiredService<IHttpClientFactory>().CreateClient("TieMentionApi"));
+
 var app = builder.Build();
 
-// builder.Services.AddMediatR(cfg => 
-//     cfg.RegisterServicesFromAssembly(typeof(CreateMentionCommand).Assembly));
-
-// builder.Services.AddInfrastructure(builder.Configuration);
-
-// Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
-{
-    app.UseExceptionHandler("/Error", createScopeForErrors: true);
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    app.UseHsts();
-}
-
 app.UseHttpsRedirection();
-
-
 app.UseAntiforgery();
 
+// ✅ Se você for usar a API diretamente no mesmo app (caso da API REST estar integrada)
+app.MapControllers();
+
+// Blazor Interactive (WebApp)
 app.MapStaticAssets();
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
