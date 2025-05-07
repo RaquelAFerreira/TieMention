@@ -28,25 +28,3 @@ Funcionalidades Principais ✨
     🏷️ Sistema de tags e categorização de menções
 
     📱 Design responsivo para todos os dispositivos
-
-///------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------///
-
-██▓░️░️░️░️░️░️░️ Under Construction...  
-
-A site inspired by the WhoSampled concept, but focused on tracking and cataloging mentions of works in other works across different media such as movies, TV shows, cartoons, books, music, and more.  
-
-### Technologies Used 🛠️  
-
-- **Blazor** – For interactive components and dynamic rendering  
-- **JavaScript** – Complementary frontend functionalities  
-- **CSS** – Responsive styling and design  
-- **HTML** – Basic page structure  
-
-### Key Features ✨  
-
-🎥 Catalog references between different types of media  
-🔍 Advanced search system for works and mention types  
-📊 Graphical visualizations of connections between works  
-👥 User profiles with contributions and personal lists  
-🏷️ Tagging system for categorizing mentions  
-📱 Responsive design for all devices  
