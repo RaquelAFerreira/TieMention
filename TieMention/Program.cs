@@ -8,11 +8,6 @@ builder.Services.AddRazorComponents()
 
 var app = builder.Build();
 
-// builder.Services.AddMediatR(cfg => 
-//     cfg.RegisterServicesFromAssembly(typeof(CreateMentionCommand).Assembly));
-
-// builder.Services.AddInfrastructure(builder.Configuration);
-
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
