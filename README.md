@@ -28,3 +28,5 @@ Funcionalidades Principais ✨
     🏷️ Sistema de tags e categorização de menções
 
     📱 Design responsivo para todos os dispositivos
+
+![image](https://github.com/user-attachments/assets/f9f2cd6b-79f1-44f0-adba-d2f4b4044de0)
