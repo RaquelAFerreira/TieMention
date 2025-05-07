@@ -1,7 +1,4 @@
 ﻿@page "/"
-@inject HttpClient Http
-@using TieMention.Api.Controllers
-@using TieMention.Domain.Entities
 
 <div class="container">
     <SearchBar/>
@@ -11,7 +8,7 @@
     </div>
 
     <div class="main-content">
-        <BlockText Head="@mentionsStr" Text="@BodyText"/>
+        <BlockText Head="@HeadText" Text="@BodyText"/>
         @* <AnalogImage/> *@
     </div>  
 
@@ -23,15 +20,9 @@
         // Simulate asynchronous loading to demonstrate streaming rendering
         await Task.Delay(500);
         var startDate = DateOnly.FromDateTime(DateTime.Now);
-        mentions = await Http.GetFromJsonAsync<List<Mention>>("api/mentions");
-        mentionsStr = mentions.ToString();
     }
 
-    private String HeadText = "Discover art through mentions tied in another art works with TieMention!"; 
+    private String HeadText = "Discover art through mentions tied in another art works with TieMention!";
 
     private String BodyText = "Dig deeper into art by discovering direct connections among over 1000 art works from Music, Movie, Paiting, Sculpture, Animation, Series and beyond. TieMention's verified content is built by a community of over 35 contributors. Make contributions to earn Cred - our very own points system. Join us now to add more knowledge and share it with the world!";
-
-    private List<Mention> mentions;
-    private string mentionsStr;
-
 }
