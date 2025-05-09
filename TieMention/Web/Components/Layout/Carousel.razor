@@ -1,30 +1,18 @@
 @{
-    var imagens = new List<string> {
-        "https://pixcap.com/cdn/blog/uploads/large_ur_Pk_DQEF_3eyll_M_Oi16_Kk3ibw_N8k_a96580ac71.webp",
-        "https://static.vecteezy.com/system/resources/previews/027/653/928/non_2x/barbie-pink-vintage-logo-illustration-free-vector.jpg",
-        "https://framerusercontent.com/images/1mhs90nwXk38DYDbSqCMKcnM.png",
-        "https://static.vecteezy.com/system/resources/previews/027/653/928/non_2x/barbie-pink-vintage-logo-illustration-free-vector.jpg",
-        "https://rollingstone.com.br/media/uploads/neo-matrix-warner-reprod.jpeg", 
-        "https://rollingstone.com.br/media/uploads/neo-matrix-warner-reprod.jpeg",
-        "https://pixcap.com/cdn/blog/uploads/large_ur_Pk_DQEF_3eyll_M_Oi16_Kk3ibw_N8k_a96580ac71.webp",
-        "https://static.vecteezy.com/system/resources/previews/027/653/928/non_2x/barbie-pink-vintage-logo-illustration-free-vector.jpg",
-        "https://framerusercontent.com/images/1mhs90nwXk38DYDbSqCMKcnM.png",
-        "https://static.vecteezy.com/system/resources/previews/027/653/928/non_2x/barbie-pink-vintage-logo-illustration-free-vector.jpg",
-        "https://framerusercontent.com/images/1mhs90nwXk38DYDbSqCMKcnM.png",
-        "https://framerusercontent.com/images/1mhs90nwXk38DYDbSqCMKcnM.png",
-        "https://static.vecteezy.com/system/resources/previews/027/653/928/non_2x/barbie-pink-vintage-logo-illustration-free-vector.jpg",
-        "https://rollingstone.com.br/media/uploads/neo-matrix-warner-reprod.jpeg", 
-        "https://rollingstone.com.br/media/uploads/neo-matrix-warner-reprod.jpeg",
-        "https://static.vecteezy.com/system/resources/previews/027/653/928/non_2x/barbie-pink-vintage-logo-illustration-free-vector.jpg"
+    var imagens = new List<(string Url, int Id)> {
+        ("https://pixcap.com/cdn/blog/uploads/large_ur_Pk_DQEF_3eyll_M_Oi16_Kk3ibw_N8k_a96580ac71.webp", 1),
+        ("https://static.vecteezy.com/system/resources/previews/027/653/928/non_2x/barbie-pink-vintage-logo-illustration-free-vector.jpg", 2),
+        ("https://framerusercontent.com/images/1mhs90nwXk38DYDbSqCMKcnM.png", 3),
+        // Adicione os outros itens com seus respectivos IDs
     };
 }
 
 <div class="carousel-container">
     <div class="slides-wrapper" id="slidesWrapper">
-        @foreach (var img in imagens)
+        @foreach (var item in imagens)
         {
-            <div class="slide">
-                <img src="@img" alt="Imagem" class="slide-image">
+            <div class="slide" onclick="navigateToDetails(@item.Id)">
+                <img src="@item.Url" alt="Imagem" class="slide-image">
                 <div class="slide-title">Barbie (2024)</div>
             </div>
         }
@@ -38,6 +26,10 @@
     const wrapper = document.getElementById('slidesWrapper');
     const slides = document.querySelectorAll('#slidesWrapper > div');
     let currentIndex = 0;
+
+    function navigateToDetails(id) {
+        window.location.href = `/mention/${id}`;
+    }
     
     function getSlidesPerView() {
         const width = window.innerWidth;

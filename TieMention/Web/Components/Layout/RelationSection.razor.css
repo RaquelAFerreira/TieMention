@@ -1,4 +1,38 @@
-.carousel-container {
+.mentions-section {
+    margin-top: 50px;
+}
+
+@media (min-width: 768px) {
+    .mentions-section {
+        margin-top: 80px;
+    }
+}
+
+.mentions-title {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .mentions-title {
+        font-size: 3.125rem;
+    }
+}
+
+.mentions-subtitle {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-top: 1.25rem;
+}
+
+@media (min-width: 768px) {
+    .mentions-subtitle {
+        font-size: 2.5rem;
+    }
+}
+
+.relation-container {
     position: relative;
     width: 100%;
     max-width: 3000px;
@@ -6,6 +40,8 @@
     margin-right: auto;
     overflow: hidden;
     margin-top: 2rem;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
 }
 
 .slides-wrapper {
@@ -13,12 +49,18 @@
     transition-property: transform;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 500ms;
+    justify-content: center; /* Centraliza os slides */
+    flex-wrap: wrap; /* Permite que os itens quebrem para linha seguinte se necessário */
+    gap: 1rem; /* Espaço entre os itens */
 }
 
 .slide {
     flex-shrink: 0;
     padding: 0.5rem;
     width: calc(100%/var(--slides-per-view));
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo do slide */
 }
 
 .slide {
@@ -38,6 +80,7 @@
     border-color: #74a814;
     border-style: solid;
     padding: 0.25rem;
+    max-width: 100%; 
 }
 
 @media (min-width: 768px) {
@@ -58,23 +101,4 @@
         font-size: 1.5rem;
         line-height: 2rem;
     }
-}
-
-.carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 0.5rem;
-    border-radius: 9999px;
-    z-index: 10;
-}
-
-.carousel-button.prev {
-    left: 0.5rem;
-}
-
-.carousel-button.next {
-    right: 0.5rem;
 }
