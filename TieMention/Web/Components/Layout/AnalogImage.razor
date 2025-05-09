@@ -8,7 +8,7 @@
     <div class="image-container">
         <div class="image-border outer"></div>
         <div class="image-border inner"></div>
-        <img src="https://static1.colliderimages.com/wordpress/wp-content/uploads/2024/02/the-matrix-code-keanu-reeves.jpg" class="main-image">
+        <img src="@Image" class="main-image">
     </div> 
     
     <div class="analog-button-container">
@@ -21,3 +21,8 @@
 </div>
 
 
+@code {
+    [Parameter]
+    public String? Image {get; set;}
+
+}

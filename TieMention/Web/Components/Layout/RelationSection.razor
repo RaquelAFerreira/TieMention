@@ -1,0 +1,29 @@
+@{
+    var imagens = new List<(string Url, int Id, string name)> {
+        ("https://static1.colliderimages.com/wordpress/wp-content/uploads/2024/02/the-matrix-code-keanu-reeves.jpg", 1, "Matrix (1999)"),
+        ("https://static.vecteezy.com/system/resources/previews/027/653/928/non_2x/barbie-pink-vintage-logo-illustration-free-vector.jpg", 2, "Barbie (2024)")
+        // Adicione os outros itens com seus respectivos IDs
+    };
+}
+
+<div class="mentions-section">            
+    <div class="mentions-title">Relation</div>
+    <div class="relation-container">
+        <div class="slides-wrapper" id="slidesWrapper">
+            @foreach (var item in imagens)
+            {
+                <div class="slide" onclick="navigateToDetails(@item.Id)">
+                    <img src="@item.Url" alt="Imagem" class="slide-image">
+                    <div class="slide-title">@item.name</div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<script>
+
+    function navigateToDetails(id) {
+        window.location.href = `/Details/${id}`;
+    }
+</script>

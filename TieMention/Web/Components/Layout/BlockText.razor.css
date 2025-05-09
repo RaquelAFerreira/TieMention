@@ -51,3 +51,7 @@
         text-align: justify;
     }
 }
+
+.preserve-line-breaks {
+    white-space: pre-line;
+}

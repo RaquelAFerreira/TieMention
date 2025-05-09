@@ -1,30 +1,29 @@
-@page "/Details/{id:int}"
-<PageTitle>Details</PageTitle>
+@page "/Mention/{id:int}"
+<PageTitle>Mention</PageTitle>
 
 <div class="container">
     <SearchBar/>
 
     <div>    
-        <MainTitle Title="Matrix (1999)"/>
+        <MainTitle Title="Barbie mentions Matrix"/>
     </div>
 
     <div class="main-content">
         <BlockText Head="@HeadText" Text="@BodyText"/>
-        <AnalogImage Image="https://static1.colliderimages.com/wordpress/wp-content/uploads/2024/02/the-matrix-code-keanu-reeves.jpg"/>
+        <AnalogImage Image="https://i.insider.com/64c1171a671ed600191563b5?width=600&format=jpeg&auto=webp"/>
     </div>
     
     <div>
-        <MentionsSection/>
+        <RelationSection/>
     </div>
 
 </div>
 
 @code {
     
-    private String? HeadText = "Movie \r\n 1999 \r\n United States";
+    private String? HeadText = "Movie and Movie\r\n 2024 and 1999\r\n United States and United States";
 
     private String? BodyText ="Matrix is a media franchise created by the Wachowski sisters, Lana and Lilly, whose debut film, The Matrix (1999), revolutionized science fiction and pop culture. The work combines philosophy, innovative action, and groundbreaking visual effects to explore themes such as reality, freedom, and the future of humanity in a machine-dominated world. 2. Plot and Setting The story takes place in a dystopian future where humanity is unaware that it lives in a computer simulation called the Matrix, created by artificial intelligences to subjugate humans while their bodies are used as an energy source. Matrix: A computer program that simulates 1990s reality, keeping humans trapped in illusion. Real World: A post-apocalyptic Earth where machines rule, and free humans live in Zion, the last resistance city. The protagonist, Neo (Thomas Anderson), is recruited by rebels led by Morpheus and Trinity, who reveal him as the potential 'Chosen One' destined to end the war against the machines. 3. Key Themes Reality vs. Illusion: Inspired by Plato’s allegory of the cave and philosophical skepticism, it questions whether the perceived world is real. Freedom and Destiny: Neo battles predetermination (represented by the Oracle and the Architect) while seeking to liberate humanity. Technology and Humanity: Explores the symbiotic relationship between humans and AI, warning of the dangers of technological dependence. 4. Technical Innovations Bullet Time: A visual effect that slows down time while the camera keeps moving, creating iconic action scenes (like Neo dodging bullets). Choreographed Fights: Inspired by martial arts and Hong Kong cinema, with intensive actor training. Visual Code: Falling green digital letters representing the Matrix’s language. 5. Key Characters Neo (Keanu Reeves): A hacker who discovers his role as the Chosen One. Morpheus (Laurence Fishburne): Resistance leader who believes in the prophecy. Trinity (Carrie-Anne Moss): Skilled warrior and Neo’s love interest. Agent Smith (Hugo Weaving): Antagonistic program that evolves into an independent threat. 6. Franchise Expansion Beyond the original trilogy (The Matrix, Reloaded, Revolutions), the franchise includes: The Animatrix (2003): An animated anthology expanding the lore. Matrix Resurrections (2021): A sequel revisiting Neo and Trinity in a new simulation. Games, comics, and literature. Matrix has influenced modern philosophy (Baudrillard’s simulacra) and technology (virtual simulation ideas). Its cyberpunk aesthetic and existential questions remain relevant, especially with advances in AI and virtual reality. Conclusion: Matrix is more than a film—it’s a phenomenon that challenges viewers to question their own reality while delivering spectacular action and a rich mythology.";
-    
 
     [Parameter]
     public int Id { get; set; }
