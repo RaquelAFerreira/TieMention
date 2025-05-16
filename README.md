@@ -29,5 +29,3 @@ Funcionalidades Principais ✨
 
     📱 Design responsivo para todos os dispositivos
 
-![image](https://github.com/user-attachments/assets/e4a6db2d-17b4-45f2-a3a9-eb58de455ecc)
-
