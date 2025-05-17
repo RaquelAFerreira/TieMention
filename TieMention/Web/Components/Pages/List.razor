@@ -3,26 +3,24 @@
 @using TieMention.Services;
 @inject PieceService PieceService
 
-<h3>Lista de Peças</h3>
+<h3>Pieces</h3>
 
-<!-- Caixa de Pesquisa -->
 <div class="input-group mb-3">
     <input 
         @bind="SearchTerm" 
         placeholder="Buscar peças..." 
         class="form-control" 
     />
-    <button @onclick="LoadPieces">Buscar</button>
+    <button @onclick="LoadPieces">Search</button>
 </div>
 
-<!-- Tabela de Peças -->
 @if (Response?.Items == null)
 {
-    <p>Carregando...</p>
+    <p>Loading...</p>
 }
 else if (!Response.Items.Any())
 {
-    <p>Nenhuma peça encontrada.</p>
+    <p>No Pieces found.</p>
 }
 else
 {
@@ -30,8 +28,8 @@ else
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Nome</th>
-                <th>Descrição</th>
+                <th>Name</th>
+                <th>Slug</th>
             </tr>
         </thead>
         <tbody>
@@ -47,24 +45,23 @@ else
     </table>
 }
 
-<!-- Paginação -->
 <div class="d-flex justify-content-between">
     <button 
         class="btn btn-primary" 
         disabled="@(_currentPage <= 1)" 
         @onclick="(() => ChangePage(_currentPage - 1))"
     >
-        Anterior
+        Previous
     </button>
     
-    <span>Página @_currentPage de @Response?.TotalPages</span>
+    <span>Page @_currentPage of @Response?.TotalPages</span>
     
     <button 
         class="btn btn-primary" 
         disabled="@(_currentPage >= Response?.TotalPages)" 
         @onclick="(() => ChangePage(_currentPage + 1))"
     >
-        Próxima
+        Next
     </button>
 </div>
 
