@@ -1,4 +1,5 @@
 using TieMention.Web.Components;
+using TieMention.Services;
 using System.Net.Http;
 using System.Net.Http.Json;
 
@@ -8,7 +9,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
-builder.Services.AddSingleton<HttpClient>();
+builder.Services.AddScoped<PieceService>();
+builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri("http://localhost:5105/") });
 
 var app = builder.Build();
 

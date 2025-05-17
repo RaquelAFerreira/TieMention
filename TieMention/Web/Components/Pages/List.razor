@@ -1,0 +1,93 @@
+@rendermode InteractiveServer
+@page "/list"
+@using TieMention.Services;
+@inject PieceService PieceService
+
+<h3>Lista de Peças</h3>
+
+<!-- Caixa de Pesquisa -->
+<div class="input-group mb-3">
+    <input 
+        @bind="SearchTerm" 
+        placeholder="Buscar peças..." 
+        class="form-control" 
+    />
+    <button @onclick="LoadPieces">Buscar</button>
+</div>
+
+<!-- Tabela de Peças -->
+@if (Response?.Items == null)
+{
+    <p>Carregando...</p>
+}
+else if (!Response.Items.Any())
+{
+    <p>Nenhuma peça encontrada.</p>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Descrição</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var piece in Response.Items)
+            {
+                <tr>
+                    <td>@piece.Id</td>
+                    <td>@piece.Name</td>
+                    <td>@piece.Slug</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+<!-- Paginação -->
+<div class="d-flex justify-content-between">
+    <button 
+        class="btn btn-primary" 
+        disabled="@(_currentPage <= 1)" 
+        @onclick="(() => ChangePage(_currentPage - 1))"
+    >
+        Anterior
+    </button>
+    
+    <span>Página @_currentPage de @Response?.TotalPages</span>
+    
+    <button 
+        class="btn btn-primary" 
+        disabled="@(_currentPage >= Response?.TotalPages)" 
+        @onclick="(() => ChangePage(_currentPage + 1))"
+    >
+        Próxima
+    </button>
+</div>
+
+@code {
+    private string SearchTerm { get; set; } = string.Empty;
+    private int _currentPage = 1;
+    private const int PageSize = 2;
+    private PieceListResponse<PieceDto>? Response { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadPieces();
+        StateHasChanged();
+    }
+
+    private async Task LoadPieces()
+    {
+        Response = await PieceService.GetPiecesAsync(SearchTerm, _currentPage, PageSize);
+    }
+
+    private async Task ChangePage(int newPage)
+    {
+        _currentPage = newPage;
+        await LoadPieces();
+    }
+}
