@@ -1,0 +1,75 @@
+.btn-neon {
+    background-color: transparent;
+    color: #74a814;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-neon:hover {
+    background-color: #74a814;
+    color: black;
+}
+
+.border-neon {
+    border: 2px solid #74a814;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.neon-card {
+    display: flex;
+    border: 2px solid #74a814;
+    padding: 1rem;
+    background-color: black;
+    transition: transform 0.2s;
+}
+
+.neon-card:hover {
+    transform: scale(1.02);
+}
+
+.piece-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 1rem;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-container {
+    border-width: 4px;
+    border-color: #74a814;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+    .search-container {
+        margin-top: 60px;
+    }
+}
+
+.search-input {
+    background-color: black;
+    color: #74a814;
+    outline: none;
+    width: 100%;
+}
+
+.search-input::placeholder { 
+    color: #74a814;
+    opacity: 50%;
+}
+
+@media (min-width: 768px) {
+    .search-input {
+        width: auto;
+    }
+}

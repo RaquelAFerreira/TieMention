@@ -1,0 +1,83 @@
+@rendermode InteractiveServer
+@using TieMention.Services
+@inject PieceService PieceService
+@inject NavigationManager NavigationManager
+
+<SearchBar/>
+
+@if (Response?.Items == null)
+{
+    <p class="text-light">Loading...</p>
+}
+else if (!Response.Items.Any())
+{
+    <p class="text-light">No Pieces found.</p>
+}
+else
+{
+    <div class="card-container">
+        @foreach (var piece in Response.Items)
+        {
+            <div class="neon-card" @onclick="(() => NavigateToDetails(piece.Id))" style="cursor: pointer;">
+                <img src="@piece.Image" alt="Piece image" class="piece-image" />
+                <div class="card-content">
+                    <h5 class="text-neon">@piece.Name (@piece.ReleaseYear)</h5>
+                    <p class="text-muted">Movie - EUA</p>
+                </div>
+            </div>
+        }
+    </div>
+
+    <div class="d-flex justify-content-between mt-4">
+        <button 
+            class="btn btn-neon" 
+            disabled="@(_currentPage <= 1)" 
+            @onclick="(() => ChangePage(_currentPage - 1))">
+            ← Previous
+        </button>
+
+        <span>Page @_currentPage of @Response?.TotalPages</span>
+
+        <button 
+            class="btn btn-neon" 
+            disabled="@(_currentPage >= Response?.TotalPages)" 
+            @onclick="(() => ChangePage(_currentPage + 1))">
+            Next →
+        </button>
+    </div>
+}
+
+@code {
+    [Parameter]
+    public string SearchTerm { get; set; } = string.Empty;
+    private int _currentPage = 1;
+    private const int PageSize = 10;
+    
+    private PieceListResponse<PieceDto>? Response { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadPieces();
+    }
+
+    private async Task LoadPieces()
+    {
+        Response = await PieceService.GetPiecesAsync(SearchTerm, _currentPage, PageSize);
+    }
+
+    private async Task ChangePage(int newPage)
+    {
+        _currentPage = newPage;
+        await LoadPieces();
+    }
+
+    private void NavigateToDetails(Guid id)
+    {
+        NavigationManager.NavigateTo($"details/{id}");
+    }
+
+    private void ResponseReturn(PieceListResponse<PieceDto> responseReturn)
+    {
+       Response = responseReturn;
+    }
+}
