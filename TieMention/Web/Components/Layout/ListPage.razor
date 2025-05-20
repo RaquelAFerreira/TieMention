@@ -1,6 +1,7 @@
 @rendermode InteractiveServer
 @using TieMention.Services
 @inject PieceService PieceService
+@inject NavigationManager NavigationManager
 
 <SearchBar/>
 
@@ -17,12 +18,11 @@ else
     <div class="card-container">
         @foreach (var piece in Response.Items)
         {
-            <div class="neon-card">
+            <div class="neon-card" @onclick="(() => NavigateToDetails(piece.Id))" style="cursor: pointer;">
                 <img src="@piece.Image" alt="Piece image" class="piece-image" />
                 <div class="card-content">
                     <h5 class="text-neon">@piece.Name (@piece.ReleaseYear)</h5>
                     <p class="text-muted">Movie - EUA</p>
-                    @* <p class="description">Body text for whatever you'd like to say. Add main takeaway points, quotes, anecdotes, or even a very very short story.</p> *@
                 </div>
             </div>
         }
@@ -48,7 +48,6 @@ else
 }
 
 @code {
-
     [Parameter]
     public string SearchTerm { get; set; } = string.Empty;
     private int _currentPage = 1;
@@ -70,6 +69,11 @@ else
     {
         _currentPage = newPage;
         await LoadPieces();
+    }
+
+    private void NavigateToDetails(Guid id)
+    {
+        NavigationManager.NavigateTo($"details/{id}");
     }
 
     private void ResponseReturn(PieceListResponse<PieceDto> responseReturn)
