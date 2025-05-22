@@ -40,7 +40,7 @@ else
     [Parameter]
     public Guid Id { get; set; }
 
-    private Piece? piece;
+    private PieceDetailsDto? piece;
     private string? errorMessage;
 
     protected override async Task OnInitializedAsync()
@@ -58,7 +58,7 @@ else
             
             if (response.IsSuccessStatusCode)
             {
-                piece = await response.Content.ReadFromJsonAsync<Piece>();
+                piece = await response.Content.ReadFromJsonAsync<PieceDetailsDto>();
                 TitleName = piece.Name + " (" + piece.ReleaseYear + ")";
             }
             else

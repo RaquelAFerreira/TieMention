@@ -1,6 +1,6 @@
 namespace TieMention.Models;
 
-public class PieceDto
+public class PieceListDto
 {
     public Guid Id { get; set; }
 

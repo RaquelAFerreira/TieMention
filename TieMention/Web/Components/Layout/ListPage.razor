@@ -53,7 +53,7 @@ else
     private int _currentPage = 1;
     private const int PageSize = 10;
     
-    private PieceListResponse<PieceDto>? Response { get; set; }
+    private PieceListResponse<PieceListDto>? Response { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
@@ -76,7 +76,7 @@ else
         NavigationManager.NavigateTo($"details/{id}");
     }
 
-    private void ResponseReturn(PieceListResponse<PieceDto> responseReturn)
+    private void ResponseReturn(PieceListResponse<PieceListDto> responseReturn)
     {
        Response = responseReturn;
     }
