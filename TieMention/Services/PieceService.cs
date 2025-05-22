@@ -12,7 +12,7 @@ public class PieceService
         _http = http;
     }
 
-    public async Task<PieceListResponse<PieceDto>?> GetPiecesAsync(string name, int page, int pageSize)
+    public async Task<PieceListResponse<PieceListDto>?> GetPiecesAsync(string name, int page, int pageSize)
     {
         var url = $"http://localhost:5105/api/piece/list?Name={name}&Page={page}&PageSize={pageSize}";
         var request = new HttpRequestMessage(HttpMethod.Get, url);
@@ -20,7 +20,7 @@ public class PieceService
 
         if (response.IsSuccessStatusCode)
         {
-            return await response.Content.ReadFromJsonAsync<PieceListResponse<PieceDto>>();
+            return await response.Content.ReadFromJsonAsync<PieceListResponse<PieceListDto>>();
 
         }
         else
