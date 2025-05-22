@@ -11,4 +11,6 @@ public class PieceListDto
     public string Image { get; set; } = string.Empty;
 
     public string ReleaseYear { get; set; } = string.Empty;
+
+    public string Description { get; set; } = string.Empty;
 }

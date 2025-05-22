@@ -18,7 +18,7 @@ else
     <div class="card-container">
         @foreach (var piece in Response.Items)
         {
-            <div class="neon-card" @onclick="(() => NavigateToDetails(piece.Id))" style="cursor: pointer;">
+            <div class="neon-card" @onclick="(() => PieceService.GetCurrentPieceDetails(NavigateToDetails(piece)))" style="cursor: pointer;">
                 <img src="@piece.Image" alt="Piece image" class="piece-image" />
                 <div class="card-content">
                     <h5 class="text-neon">@piece.Name (@piece.ReleaseYear)</h5>
@@ -71,9 +71,10 @@ else
         await LoadPieces();
     }
 
-    private void NavigateToDetails(Guid id)
+    private PieceListDto NavigateToDetails(PieceListDto piece)
     {
-        NavigationManager.NavigateTo($"details/{id}");
+        NavigationManager.NavigateTo($"details/{piece.Id}");
+        return piece;
     }
 
     private void ResponseReturn(PieceListResponse<PieceListDto> responseReturn)
