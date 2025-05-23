@@ -33,64 +33,132 @@
 
 <script>
 (function () {
+    // Cache de elementos
     const wrapper = document.getElementById('slidesWrapper');
-    const slides = wrapper.querySelectorAll('.slide');
+    const slides = Array.from(wrapper.querySelectorAll('.slide'));
+    const nextBtn = document.querySelector('.next');
+    const prevBtn = document.querySelector('.prev');
     let currentIndex = 0;
+    let slidesPerView = 0;
+    let resizeTimeout;
 
-    function navigateToDetails(id) {
+    // Configurações ajustáveis
+    const config = {
+        responsiveBreakpoints: [
+            { minWidth: 1640, slides: 5 },
+            { minWidth: 1420, slides: 4 },
+            { minWidth: 1010, slides: 3 },
+            { minWidth: 400, slides: 2 },
+            { minWidth: 0, slides: 1 }
+        ],
+        transitionDuration: '0.5s',
+        autoSlideInterval: null // Pode definir um valor em ms para slides automáticos
+    };
+
+    // Função para navegar para os detalhes
+    const navigateToDetails = (id) => {
         window.location.href = `/mention/${id}`;
-    }
+    };
 
-    window.navigateToDetails = navigateToDetails;
-
-    function getSlidesPerView() {
+    // Calcula quantos slides são visíveis
+    const calculateSlidesPerView = () => {
         const width = window.innerWidth;
-        if (width >= 1640) return 5;
-        if (width >= 1420) return 4;
-        if (width >= 1010) return 3;
-        if (width >= 400) return 2;
-        return 1;
-    }
+        const breakpoint = config.responsiveBreakpoints.find(bp => width >= bp.minWidth);
+        return breakpoint ? breakpoint.slides : 1;
+    };
 
-    function updateCarousel() {
-        const slidesPerView = getSlidesPerView();
-        const slideWidth = 100 / slidesPerView;
+    // Atualiza o carrossel
+    const updateCarousel = () => {
+        slidesPerView = calculateSlidesPerView();
         const maxIndex = Math.max(slides.length - slidesPerView, 0);
         
-        // Ajusta o currentIndex se necessário
-        currentIndex = Math.min(currentIndex, maxIndex);
+        // Corrige currentIndex se necessário
+        currentIndex = Math.min(Math.max(currentIndex, 0), maxIndex);
         
-        // Define a largura dos slides
+        // Aplica estilos e transformação
+        wrapper.style.transitionDuration = config.transitionDuration;
+        const slideWidth = 100 / slidesPerView;
+        const offset = currentIndex * slideWidth;
+        
         slides.forEach(slide => {
             slide.style.flex = `0 0 ${slideWidth}%`;
+            slide.style.maxWidth = `${slideWidth}%`;
         });
         
-        // Calcula o deslocamento
-        const offset = currentIndex * slideWidth;
         wrapper.style.transform = `translateX(-${offset}%)`;
-    }
+        
+        // Atualiza estado dos botões
+        prevBtn.disabled = currentIndex === 0;
+        nextBtn.disabled = currentIndex >= maxIndex;
+    };
 
-    function nextSlide() {
-        const slidesPerView = getSlidesPerView();
-        const maxIndex = Math.max(slides.length - slidesPerView, 0);
-        currentIndex = (currentIndex + 1) > maxIndex ? 0 : currentIndex + 1;
+    // Navegação
+    const goToSlide = (index) => {
+        currentIndex = index;
         updateCarousel();
-    }
+    };
 
-    function prevSlide() {
-        const slidesPerView = getSlidesPerView();
+    const nextSlide = () => {
         const maxIndex = Math.max(slides.length - slidesPerView, 0);
-        currentIndex = (currentIndex - 1) < 0 ? maxIndex : currentIndex - 1;
+        goToSlide(currentIndex < maxIndex ? currentIndex + 1 : 0);
+    };
+
+    const prevSlide = () => {
+        const maxIndex = Math.max(slides.length - slidesPerView, 0);
+        goToSlide(currentIndex > 0 ? currentIndex - 1 : maxIndex);
+    };
+
+    // Event Listeners com debounce para resize
+    const handleResize = () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+            updateCarousel();
+        }, 100);
+    };
+
+    // Inicialização
+    const init = () => {
+        // Event listeners
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+        window.addEventListener('resize', handleResize);
+        
+        // Toque para dispositivos móveis
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        wrapper.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+        
+        wrapper.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, { passive: true });
+        
+        const handleSwipe = () => {
+            if (touchStartX - touchEndX > 50) nextSlide(); // Swipe left
+            if (touchEndX - touchStartX > 50) prevSlide(); // Swipe right
+        };
+        
+        // Auto slide (opcional)
+        if (config.autoSlideInterval) {
+            setInterval(nextSlide, config.autoSlideInterval);
+        }
+        
+        // Inicializa
         updateCarousel();
-    }
+    };
 
-    document.querySelector('.next').addEventListener('click', nextSlide);
-    document.querySelector('.prev').addEventListener('click', prevSlide);
+    // Disponibiliza funções globalmente se necessário
+    window.Carousel = {
+        next: nextSlide,
+        prev: prevSlide,
+        goTo: goToSlide,
+        update: updateCarousel
+    };
 
-    window.addEventListener('resize', updateCarousel);
-    window.addEventListener('load', updateCarousel);
-    
-    // Inicializa o carrossel
-    updateCarousel();
+    // Inicia o carrossel
+    document.addEventListener('DOMContentLoaded', init);
 })();
 </script>
