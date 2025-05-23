@@ -6,6 +6,13 @@
         ("https://pixcap.com/cdn/blog/uploads/large_ur_Pk_DQEF_3eyll_M_Oi16_Kk3ibw_N8k_a96580ac71.webp", 4),
         ("https://static.vecteezy.com/system/resources/previews/027/653/928/non_2x/barbie-pink-vintage-logo-illustration-free-vector.jpg", 5),
         ("https://framerusercontent.com/images/1mhs90nwXk38DYDbSqCMKcnM.png", 6),
+        ("https://framerusercontent.com/images/1mhs90nwXk38DYDbSqCMKcnM.png", 6),
+        ("https://framerusercontent.com/images/1mhs90nwXk38DYDbSqCMKcnM.png", 6),
+        ("https://framerusercontent.com/images/1mhs90nwXk38DYDbSqCMKcnM.png", 6),
+        ("https://framerusercontent.com/images/1mhs90nwXk38DYDbSqCMKcnM.png", 6),
+        ("https://framerusercontent.com/images/1mhs90nwXk38DYDbSqCMKcnM.png", 6),
+        ("https://framerusercontent.com/images/1mhs90nwXk38DYDbSqCMKcnM.png", 6),
+        ("https://framerusercontent.com/images/1mhs90nwXk38DYDbSqCMKcnM.png", 6),
     };
 }
 
@@ -34,7 +41,7 @@
         window.location.href = `/mention/${id}`;
     }
 
-    window.navigateToDetails = navigateToDetails; // Disponibiliza globalmente para uso inline
+    window.navigateToDetails = navigateToDetails;
 
     function getSlidesPerView() {
         const width = window.innerWidth;
@@ -47,25 +54,32 @@
 
     function updateCarousel() {
         const slidesPerView = getSlidesPerView();
-        wrapper.style.setProperty('--slides-per-view', slidesPerView);
-
-        const totalVisible = Math.min(slidesPerView, slides.length);
-        const slideWidth = 100 / totalVisible;
+        const slideWidth = 100 / slidesPerView;
+        const maxIndex = Math.max(slides.length - slidesPerView, 0);
+        
+        // Ajusta o currentIndex se necessário
+        currentIndex = Math.min(currentIndex, maxIndex);
+        
+        // Define a largura dos slides
+        slides.forEach(slide => {
+            slide.style.flex = `0 0 ${slideWidth}%`;
+        });
+        
+        // Calcula o deslocamento
         const offset = currentIndex * slideWidth;
-
         wrapper.style.transform = `translateX(-${offset}%)`;
     }
 
     function nextSlide() {
         const slidesPerView = getSlidesPerView();
-        const maxIndex = slides.length - slidesPerView;
+        const maxIndex = Math.max(slides.length - slidesPerView, 0);
         currentIndex = (currentIndex + 1) > maxIndex ? 0 : currentIndex + 1;
         updateCarousel();
     }
 
     function prevSlide() {
         const slidesPerView = getSlidesPerView();
-        const maxIndex = slides.length - slidesPerView;
+        const maxIndex = Math.max(slides.length - slidesPerView, 0);
         currentIndex = (currentIndex - 1) < 0 ? maxIndex : currentIndex - 1;
         updateCarousel();
     }
@@ -73,13 +87,10 @@
     document.querySelector('.next').addEventListener('click', nextSlide);
     document.querySelector('.prev').addEventListener('click', prevSlide);
 
-    window.addEventListener('resize', () => {
-        const slidesPerView = getSlidesPerView();
-        const maxIndex = slides.length - slidesPerView;
-        if (currentIndex > maxIndex) currentIndex = maxIndex;
-        updateCarousel();
-    });
-
+    window.addEventListener('resize', updateCarousel);
     window.addEventListener('load', updateCarousel);
+    
+    // Inicializa o carrossel
+    updateCarousel();
 })();
 </script>
