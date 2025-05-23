@@ -6,7 +6,6 @@
         ("https://pixcap.com/cdn/blog/uploads/large_ur_Pk_DQEF_3eyll_M_Oi16_Kk3ibw_N8k_a96580ac71.webp", 4),
         ("https://static.vecteezy.com/system/resources/previews/027/653/928/non_2x/barbie-pink-vintage-logo-illustration-free-vector.jpg", 5),
         ("https://framerusercontent.com/images/1mhs90nwXk38DYDbSqCMKcnM.png", 6),
-        // Adicione os outros itens com seus respectivos IDs
     };
 }
 
@@ -15,7 +14,7 @@
         @foreach (var item in imagens)
         {
             <div class="slide" onclick="navigateToDetails(@item.Id)">
-                <img src="@item.Url" alt="Imagem" class="slide-image">
+                <img src="@item.Url" alt="Imagem" class="slide-image" />
                 <div class="slide-title">Barbie (2024)</div>
             </div>
         }
@@ -26,14 +25,17 @@
 </div>
 
 <script>
+(function () {
     const wrapper = document.getElementById('slidesWrapper');
-    const slides = document.querySelectorAll('#slidesWrapper > div');
+    const slides = wrapper.querySelectorAll('.slide');
     let currentIndex = 0;
 
     function navigateToDetails(id) {
         window.location.href = `/mention/${id}`;
     }
-    
+
+    window.navigateToDetails = navigateToDetails; // Disponibiliza globalmente para uso inline
+
     function getSlidesPerView() {
         const width = window.innerWidth;
         if (width >= 1640) return 5;
@@ -42,33 +44,42 @@
         if (width >= 400) return 2;
         return 1;
     }
-    
+
     function updateCarousel() {
         const slidesPerView = getSlidesPerView();
-        // Atualiza CSS variable
         wrapper.style.setProperty('--slides-per-view', slidesPerView);
-        
-        const slideWidth = 100 / slidesPerView;
+
+        const totalVisible = Math.min(slidesPerView, slides.length);
+        const slideWidth = 100 / totalVisible;
         const offset = currentIndex * slideWidth;
+
         wrapper.style.transform = `translateX(-${offset}%)`;
     }
 
-    // Navegação
-    document.querySelector('.next').addEventListener('click', () => {
+    function nextSlide() {
         const slidesPerView = getSlidesPerView();
         const maxIndex = slides.length - slidesPerView;
         currentIndex = (currentIndex + 1) > maxIndex ? 0 : currentIndex + 1;
         updateCarousel();
-    });
+    }
 
-    document.querySelector('.prev').addEventListener('click', () => {
+    function prevSlide() {
         const slidesPerView = getSlidesPerView();
         const maxIndex = slides.length - slidesPerView;
         currentIndex = (currentIndex - 1) < 0 ? maxIndex : currentIndex - 1;
         updateCarousel();
+    }
+
+    document.querySelector('.next').addEventListener('click', nextSlide);
+    document.querySelector('.prev').addEventListener('click', prevSlide);
+
+    window.addEventListener('resize', () => {
+        const slidesPerView = getSlidesPerView();
+        const maxIndex = slides.length - slidesPerView;
+        if (currentIndex > maxIndex) currentIndex = maxIndex;
+        updateCarousel();
     });
 
-    // Redimensionamento
-    window.addEventListener('resize', updateCarousel);
     window.addEventListener('load', updateCarousel);
+})();
 </script>
