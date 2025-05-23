@@ -33,7 +33,6 @@ public class PieceService
         {
             return await response.Content.ReadFromJsonAsync<PieceListResponse<PieceListDto>>();
         }
-
         return null;
     }
 
@@ -42,7 +41,6 @@ public class PieceService
         var url = $"http://localhost:5105/api/piece/{Id}";
         var request = new HttpRequestMessage(HttpMethod.Get, url);
         var response = await _http.SendAsync(request);
-
 
         if (response.IsSuccessStatusCode)
         {
