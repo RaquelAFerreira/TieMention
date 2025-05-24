@@ -22,24 +22,25 @@ else
                 <img src="@piece.Image" alt="Piece image" class="piece-image" />
                 <div class="card-content">
                     <h5 class="text-neon">@piece.Name (@piece.ReleaseYear)</h5>
+                    <p class="text-muted">@piece.Category</p>
                     <p class="text-muted">@TruncateDescription(piece.Description)</p>
                 </div>
             </div>
         }
     </div>
 
-    <div class="d-flex justify-content-between mt-4">
+    <div class="pagination-container">
         <button 
-            class="btn btn-neon" 
+            class="btn-neon" 
             disabled="@(_currentPage <= 1)" 
             @onclick="(() => ChangePage(_currentPage - 1))">
             ← Previous
         </button>
 
-        <span>Page @_currentPage of @Response?.TotalPages</span>
+        <span class="page-indicator">Page @_currentPage of @Response?.TotalPages</span>
 
         <button 
-            class="btn btn-neon" 
+            class="btn-neon" 
             disabled="@(_currentPage >= Response?.TotalPages)" 
             @onclick="(() => ChangePage(_currentPage + 1))">
             Next →
@@ -51,7 +52,7 @@ else
     [Parameter]
     public string SearchTerm { get; set; } = string.Empty;
     private int _currentPage = 1;
-    private const int PageSize = 10;
+    private const int PageSize = 2;
     
     private PieceListResponse<PieceListDto>? Response { get; set; }
 

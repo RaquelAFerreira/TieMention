@@ -19,13 +19,12 @@
 else
 {   
     <div>    
-        @* <MainTitle Title="@TitleName"/> *@
         <MainTitle Title="@PieceService.PieceDetails.Name"/>
     </div>
 
     <div class="main-content">
         <BlockText Head="@HeadText" Text="@PieceService.PieceDetails.Description"/>
-        <AnalogImage Image="https://static1.colliderimages.com/wordpress/wp-content/uploads/2024/02/the-matrix-code-keanu-reeves.jpg"/>
+        <AnalogImage Image="@PieceService.PieceDetails.Image"/>
     </div>
     
     <div>
@@ -37,9 +36,7 @@ else
 
 @code {
     
-    private String? HeadText = "Movie \r\n 1999 \r\n United States";
-
-    private String? TitleName;
+    private String? HeadText;
 
     [Parameter]
     public Guid Id { get; set; }
@@ -52,5 +49,7 @@ else
         {
             PieceService.PieceDetails = await PieceService.GetPieceAsync(Id);
         }
+
+        HeadText = PieceService.PieceDetails.Category + "\r\n" + PieceService.PieceDetails.ReleaseYear;
     }
 }
