@@ -9,7 +9,7 @@
     .text-content {
         grid-column: span 7 / span 7;
         height: 600px;
-        margin-right: 30px;
+        margin-right: 50px;
     }
 }
 

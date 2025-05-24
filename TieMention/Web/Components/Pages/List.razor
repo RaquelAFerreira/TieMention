@@ -4,7 +4,9 @@
 @using TieMention.Services
 @inject PieceService PieceService
 
-<ListPage SearchTerm="@searchTerm"/>
+<div class="container">
+    <ListPage SearchTerm="@searchTerm"/>
+</div>
 
 @code {
     [Parameter]

@@ -4,9 +4,14 @@
 @inject NavigationManager Navigation
 
 <div class="search-container">
-    <i @onclick="LoadPieces" class="fa fa-search"></i> 
-    <input @bind="SearchTerm"  type="text" placeholder="Search for mentions" class="search-input">
-    <button @onclick="LoadPieces">Search</button>
+    <i @onclick="LoadPieces" class="fa fa-search"></i>
+    <input @bind="SearchTerm" 
+           @onkeypress="HandleKeyPress"
+           @bind:event="oninput"
+           type="text" 
+           placeholder="Search for mentions" 
+           class="search-input">
+    @* <button @onclick="LoadPieces">Search</button> *@
 </div>
 
 @code {
@@ -14,7 +19,17 @@
 
     private async Task LoadPieces()
     {
-        Navigation.NavigateTo("/list/"+SearchTerm);
+        if (!string.IsNullOrWhiteSpace(SearchTerm))
+        {
+            Navigation.NavigateTo("/list/" + SearchTerm.Trim());
+        }
     }
 
+    private void HandleKeyPress(KeyboardEventArgs e)
+    {
+        if (e.Key == "Enter")
+        {
+            LoadPieces();
+        }
+    }
 }
