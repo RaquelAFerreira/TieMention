@@ -22,7 +22,7 @@ else
                 <img src="@piece.Image" alt="Piece image" class="piece-image" />
                 <div class="card-content">
                     <h5 class="text-neon">@piece.Name (@piece.ReleaseYear)</h5>
-                    <p class="text-muted">Movie - EUA</p>
+                    <p class="text-muted">@TruncateDescription(piece.Description)</p>
                 </div>
             </div>
         }
@@ -58,6 +58,12 @@ else
     protected override async Task OnInitializedAsync()
     {
         await LoadPieces();
+    }
+
+    private string TruncateDescription(string description, int maxLength = 200)
+    {
+        if (string.IsNullOrEmpty(description)) return description;
+        return description.Length > maxLength ? description.Substring(0, maxLength) + "..." : description;
     }
 
     private async Task LoadPieces()
