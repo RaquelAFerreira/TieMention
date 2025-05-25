@@ -1,5 +1,5 @@
 @rendermode InteractiveServer
-@page "/Details/{id:guid}"
+@page "/Details/{slug}"
 @inject HttpClient http
 @inject IJSRuntime JSRuntime
 @using System.Net.Http.Headers
@@ -39,7 +39,7 @@ else
     private String? HeadText;
 
     [Parameter]
-    public Guid Id { get; set; }
+    public String Slug { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
@@ -47,9 +47,9 @@ else
 
         if (PieceService.PieceDetails == null)
         {
-            PieceService.PieceDetails = await PieceService.GetPieceAsync(Id);
+            PieceService.PieceDetails = await PieceService.GetPieceAsync(Slug);
         }
 
-        HeadText = PieceService.PieceDetails.Category + "\r\n" + PieceService.PieceDetails.ReleaseYear;
+        HeadText = "Category: " + PieceService.PieceDetails.Category + "\r\n" + "Release Year: " + PieceService.PieceDetails.ReleaseYear;
     }
 }

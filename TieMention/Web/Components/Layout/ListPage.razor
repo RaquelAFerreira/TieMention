@@ -21,17 +21,17 @@ else
             <div class="neon-card" @onclick="(() => PieceService.GetCurrentPieceDetails(NavigateToDetails(piece)))" style="cursor: pointer;">
                 <img src="@piece.Image" alt="Piece image" class="piece-image" />
                 <div class="card-content">
-                    <h5 class="text-neon">@piece.Name (@piece.ReleaseYear)</h5>
-                    <p class="text-muted">@piece.Category</p>
+                    <h5 class="text-neon"><b>@piece.Name (@piece.ReleaseYear)</b></h5>
+                    <p class="text-muted"><b>@piece.Category</b></p>
                     <p class="text-muted">@TruncateDescription(piece.Description)</p>
                 </div>
             </div>
         }
     </div>
-
+    
     <div class="pagination-container">
         <button 
-            class="btn-neon" 
+            class="btn-neon pagination-btn" 
             disabled="@(_currentPage <= 1)" 
             @onclick="(() => ChangePage(_currentPage - 1))">
             ← Previous
@@ -40,7 +40,7 @@ else
         <span class="page-indicator">Page @_currentPage of @Response?.TotalPages</span>
 
         <button 
-            class="btn-neon" 
+            class="btn-neon pagination-btn" 
             disabled="@(_currentPage >= Response?.TotalPages)" 
             @onclick="(() => ChangePage(_currentPage + 1))">
             Next →
@@ -80,7 +80,7 @@ else
 
     private PieceListDto NavigateToDetails(PieceListDto piece)
     {
-        NavigationManager.NavigateTo($"details/{piece.Id}");
+        NavigationManager.NavigateTo($"details/{piece.Slug}");
         return piece;
     }
 
