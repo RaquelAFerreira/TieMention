@@ -36,9 +36,9 @@ public class PieceService
         return null;
     }
 
-    public async Task<PieceListDto?> GetPieceAsync(Guid Id)
+    public async Task<PieceListDto?> GetPieceAsync(String Slug)
     {
-        var url = $"http://localhost:5105/api/piece/{Id}";
+        var url = $"http://localhost:5105/api/piece/{Slug}";
         var request = new HttpRequestMessage(HttpMethod.Get, url);
         var response = await _http.SendAsync(request);
 
