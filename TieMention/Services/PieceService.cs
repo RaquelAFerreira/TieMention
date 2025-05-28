@@ -36,7 +36,7 @@ public class PieceService
         return null;
     }
 
-    public async Task<PieceListDto?> GetPieceAsync(String Slug)
+    public async Task<PieceListDto?> GetPieceAsync(string Slug)
     {
         var url = $"http://localhost:5105/api/piece/{Slug}";
         var request = new HttpRequestMessage(HttpMethod.Get, url);
@@ -45,6 +45,19 @@ public class PieceService
         if (response.IsSuccessStatusCode)
         {
             return await response.Content.ReadFromJsonAsync<PieceListDto>();
+        }
+        return null;
+    }
+
+    public async Task<List<PieceMentionsDto?>> GetMentionerPiecesAsync(Guid Id)
+    {
+        var url = $"http://localhost:5105/api/piece/mentioners/{Id}";
+        var request = new HttpRequestMessage(HttpMethod.Get, url);
+        var response = await _http.SendAsync(request);
+
+        if (response.IsSuccessStatusCode)
+        {
+            return await response.Content.ReadFromJsonAsync<List<PieceMentionsDto>>();
         }
         return null;
     }

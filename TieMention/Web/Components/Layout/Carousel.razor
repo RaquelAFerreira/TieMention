@@ -16,29 +16,41 @@
     };
 }
 
-<div class="carousel-container">
-    <div class="slides-wrapper" id="slidesWrapper">
-        @foreach (var item in imagens)
-        {
-            <div class="slide" onclick="navigateToDetails(@item.Id)">
-                <img src="@item.Url" alt="Imagem" class="slide-image" />
-                <div class="slide-title">Barbie (2024)</div>
-            </div>
-        }
+@code {
+
+    [Parameter]
+    public List<PieceMentionsDto?> Content { get; set; }
+}
+
+@if (Content == null)
+{
+    <p class="text-light">Loading...</p>
+}
+else
+{
+    <div class="carousel-container">
+        <div class="slides-wrapper" id="slidesWrapper">
+            @foreach (var item in Content)
+            {
+                <div class="slide" onclick="navigateToDetails(@item.MentionSlug)">
+                    <img src="@item.Image" alt="Imagem" class="slide-image" />
+                    <div class="slide-title">@item.Name (@item.ReleaseYear)</div>
+                </div>
+            }
+        </div>
+
+        <button class="carousel-button prev">&#10094;</button>
+        <button class="carousel-button next">&#10095;</button>
     </div>
-
-    <button class="carousel-button prev">&#10094;</button>
-    <button class="carousel-button next">&#10095;</button>
-</div>
-
+}
 <script>
 (function () {
     const wrapper = document.getElementById('slidesWrapper');
     const slides = wrapper.querySelectorAll('.slide');
     let currentIndex = 0;
 
-    function navigateToDetails(id) {
-        window.location.href = `/mention/${id}`;
+    function navigateToDetails(slug) {
+        window.location.href = `/mention/${slug}`;
     }
 
     window.navigateToDetails = navigateToDetails;
