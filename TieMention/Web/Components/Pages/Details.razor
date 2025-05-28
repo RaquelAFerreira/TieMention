@@ -28,7 +28,7 @@ else
     </div>
     
     <div>
-        <MentionsSection/>
+        <MentionsSection Head="Mentioned By" Content="@Mentioners"/>
     </div>
 }
 
@@ -41,6 +41,8 @@ else
     [Parameter]
     public String Slug { get; set; }
 
+    public List<PieceMentionsDto?> Mentioners { get; set; }
+
     protected override async Task OnInitializedAsync()
     {
         PieceService.ApiResponse += StateHasChanged;
@@ -49,6 +51,8 @@ else
         {
             PieceService.PieceDetails = await PieceService.GetPieceAsync(Slug);
         }
+
+        Mentioners = await PieceService.GetMentionerPiecesAsync(PieceService.PieceDetails.Id);
 
         HeadText = "Category: " + PieceService.PieceDetails.Category + "\r\n" + "Release Year: " + PieceService.PieceDetails.ReleaseYear;
     }
