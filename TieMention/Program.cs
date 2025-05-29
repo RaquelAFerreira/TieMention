@@ -10,6 +10,8 @@ builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
 builder.Services.AddScoped<PieceService>();
+builder.Services.AddScoped<MentionService>();
+
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri("http://localhost:5105/") });
 
 var app = builder.Build();

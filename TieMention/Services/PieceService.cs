@@ -16,10 +16,19 @@ public class PieceService
 
     public PieceListDto PieceDetails { get; set; }
 
+    public PieceMentionsDto MentionPiece { get; set; }
+
     public void GetCurrentPieceDetails(PieceListDto pieceDetails)
     {
 
         PieceDetails = pieceDetails;
+        ApiResponse?.Invoke();
+    }
+
+    public void GetCurrentMentionPiece(PieceMentionsDto pieceDetails)
+    {
+
+        MentionPiece = pieceDetails;
         ApiResponse?.Invoke();
     }
 
