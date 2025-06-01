@@ -14,6 +14,8 @@ public class PieceService
 
     public event Action? ApiResponse;
 
+    public event Action? ApiResponses;
+
     public PieceListDto PieceDetails { get; set; }
 
     public PieceMentionsDto MentionPiece { get; set; }
@@ -29,7 +31,7 @@ public class PieceService
     {
 
         MentionPiece = pieceDetails;
-        ApiResponse?.Invoke();
+        ApiResponses?.Invoke();
     }
 
     public async Task<PieceListResponse<PieceListDto>?> GetPiecesAsync(string name, int page, int pageSize)
