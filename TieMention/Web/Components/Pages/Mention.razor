@@ -34,16 +34,7 @@
 
     protected override async Task OnInitializedAsync()
     {
-        PieceService.ApiResponse += StateHasChanged;
-
-        if (PieceService.MentionPiece == null)
-        {
-            MentionDetails = await MentionService.GetMentionAsync(new Guid(), Slug);
-        }
-        else
-        {
-            MentionDetails = await MentionService.GetMentionAsync(PieceService.MentionPiece.IdMention);
-        }
+        MentionDetails = await MentionService.GetMentionAsync(PieceService.MentionPiece.IdMention);
 
         HeadText = "Categories: " + MentionDetails.MentionerPiece.Category + " and " + MentionDetails.MentionedPiece.Category + "\r\n"
                  + "Release Years: " + MentionDetails.MentionerPiece.ReleaseYear + " and " + MentionDetails.MentionedPiece.ReleaseYear;

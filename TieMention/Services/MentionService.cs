@@ -14,12 +14,8 @@ public class MentionService
 
     public async Task<MentionDetailsDto?> GetMentionAsync(Guid id, string Slug = null)
     {
-        var url = $"http://localhost:5105/api/mention/{id}";
 
-        if (id == new Guid())
-        {
-            url = $"http://localhost:5105/api/mention/{Slug}";
-        }
+        var url = $"http://localhost:5105/api/mention/{Slug}";
 
         var request = new HttpRequestMessage(HttpMethod.Get, url);
         var response = await _http.SendAsync(request);
