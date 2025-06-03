@@ -26,10 +26,13 @@ else
         <BlockText Head="@HeadText" Text="@PieceService.PieceDetails.Description"/>
         <AnalogImage Image="@PieceService.PieceDetails.Image"/>
     </div>
-    
-    <div>
-        <MentionsSection Head="Mentioned By" Content="@Mentioners"/>
-    </div>
+    @if (Mentioners != null && Mentioners.Count != 0)
+    {
+        <div>
+            <MentionsSection Head="Mentioned By" Content="@Mentioners"/>
+        </div>        
+    }
+
 }
 
 </div>
