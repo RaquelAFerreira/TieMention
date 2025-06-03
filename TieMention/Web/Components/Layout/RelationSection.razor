@@ -1,29 +1,32 @@
-@{
-    var imagens = new List<(string Url, int Id, string name)> {
-        ("https://static1.colliderimages.com/wordpress/wp-content/uploads/2024/02/the-matrix-code-keanu-reeves.jpg", 1, "Matrix (1999)"),
-        ("https://static.vecteezy.com/system/resources/previews/027/653/928/non_2x/barbie-pink-vintage-logo-illustration-free-vector.jpg", 2, "Barbie (2024)")
-        // Adicione os outros itens com seus respectivos IDs
-    };
-}
+@rendermode InteractiveServer
+@inject NavigationManager NavigationManager
+@inject PieceService PieceService
 
 <div class="mentions-section">            
     <div class="mentions-title">Relation</div>
     <div class="relation-container">
         <div class="slides-wrapper" id="slidesWrapper">
-            @foreach (var item in imagens)
-            {
-                <div class="slide" onclick="navigateToDetails(@item.Id)">
-                    <img src="@item.Url" alt="Imagem" class="slide-image">
-                    <div class="slide-title">@item.name</div>
-                </div>
-            }
+            <div class="slide" @onclick="(() => NavigateToDetails(Content.MentionerPiece.Slug))">
+                <img src="@Content.MentionerPiece.Image" alt="Imagem" class="slide-image" />
+                <div class="slide-title">@Content.MentionerPiece.Name (@Content.MentionerPiece.ReleaseYear)</div>
+            </div>
+            <div class="slide" @onclick="(() => NavigateToDetails(Content.MentionedPiece.Slug))">
+                <img src="@Content.MentionedPiece.Image" alt="Imagem" class="slide-image" />
+                <div class="slide-title">@Content.MentionedPiece.Name (@Content.MentionedPiece.ReleaseYear)</div>
+            </div>
         </div>
     </div>
 </div>
 
-<script>
 
-    function navigateToDetails(id) {
-        window.location.href = `/Details/${id}`;
+@code {
+
+    [Parameter]
+    public MentionDetailsDto? Content { get; set; }
+
+    private void NavigateToDetails(String Slug)
+    {
+        PieceService.PieceDetails = null;
+        NavigationManager.NavigateTo($"Piece/{Slug}");
     }
-</script>
+}

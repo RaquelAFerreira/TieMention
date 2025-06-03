@@ -7,10 +7,9 @@
     [Parameter]
     public List<PieceMentionsDto?> Content { get; set; }
 
-    private PieceMentionsDto NavigateToDetails(PieceMentionsDto pieceMention)
+    private void NavigateToDetails(PieceMentionsDto pieceMention)
     {
         NavigationManager.NavigateTo($"Mention/{pieceMention.MentionSlug}");
-        return pieceMention;
     }
 }
 
@@ -24,7 +23,7 @@ else
         <div class="slides-wrapper" id="slidesWrapper">
             @foreach (var item in Content)
             {
-                <div class="slide" @onclick="(() => PieceService.GetCurrentMentionPiece(NavigateToDetails(item)))">
+                <div class="slide" @onclick="(() => NavigateToDetails(item))">
                     <img src="@item.Image" alt="Imagem" class="slide-image" />
                     <div class="slide-title">@item.Name (@item.ReleaseYear)</div>
                 </div>

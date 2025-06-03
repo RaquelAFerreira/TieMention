@@ -8,6 +8,12 @@
   margin-top: 60px;
 }
 
+.body-container {
+  background-color: #000000;
+  color: #74a814;
+  padding: 1.5rem; /* 6 units in Tailwind typically equals 1.5rem or 24px */
+}
+
 @media (min-width: 768px) {
   .container {
     min-height: 1000px;
