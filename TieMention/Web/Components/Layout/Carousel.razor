@@ -1,93 +1,115 @@
 @rendermode InteractiveServer
 @inject NavigationManager NavigationManager
+@inject IJSRuntime JSRuntime
 @inject PieceService PieceService
 
 @code {
-
     [Parameter]
     public List<PieceMentionsDto?> Content { get; set; }
 
-    private void NavigateToDetails(PieceMentionsDto pieceMention)
+    private async Task NavigateToDetails(PieceMentionsDto pieceMention)
     {
         NavigationManager.NavigateTo($"Mention/{pieceMention.MentionSlug}");
     }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender && Content != null)
+        {
+            await JSRuntime.InvokeVoidAsync("initializeCarousel", Content.Count);
+        }
+    }
+
+    private string TruncateDescription(string description, int maxLength = 18)
+    {
+        if (string.IsNullOrEmpty(description)) return description;
+        return description.Length > maxLength ? description.Substring(0, maxLength) + "..." : description;
+    }
 }
 
-@if (Content == null)
-{
-    <p class="text-light">Loading...</p>
-}
-else
-{
-    <div class="carousel-container">
-        <div class="slides-wrapper" id="slidesWrapper">
-            @foreach (var item in Content)
-            {
-                <div class="slide" @onclick="(() => NavigateToDetails(item))">
-                    <img src="@item.Image" alt="Imagem" class="slide-image" />
-                    <div class="slide-title">@item.Name (@item.ReleaseYear)</div>
+<div class="carousel-container">
+    <div class="slides-wrapper" id="slidesWrapper">
+        @foreach (var item in Content)
+        {
+            <div class="slide" @onclick="(() => NavigateToDetails(item))">
+                <div class="image-container">
+                    <img src="@item.Image" alt="@item.Name" class="slide-image" />
                 </div>
-            }
-        </div>
-
-        <button class="carousel-button prev">&#10094;</button>
-        <button class="carousel-button next">&#10095;</button>
+                <div class="slide-title">@TruncateDescription(item.Name) (@item.ReleaseYear)</div>
+            </div>
+        }
     </div>
-}
+
+    <button class="carousel-button prev" id="prevButton">&#10094;</button>
+    <button class="carousel-button next" id="nextButton">&#10095;</button>
+</div>
+
 <script>
 (function () {
-    const wrapper = document.getElementById('slidesWrapper');
-    const slides = wrapper.querySelectorAll('.slide');
     let currentIndex = 0;
+    let slidesPerView = 5;
 
-    function getSlidesPerView() {
-        const width = window.innerWidth;
-        if (width >= 1640) return 5;
-        if (width >= 1420) return 4;
-        if (width >= 1010) return 3;
-        if (width >= 400) return 2;
-        return 1;
-    }
+    function initializeCarousel(itemCount) {
+        const wrapper = document.getElementById('slidesWrapper');
+        const slides = wrapper?.querySelectorAll('.slide');
+        const prevButton = document.getElementById('prevButton');
+        const nextButton = document.getElementById('nextButton');
 
-    function updateCarousel() {
-        const slidesPerView = getSlidesPerView();
-        const slideWidth = 100 / slidesPerView;
-        const maxIndex = Math.max(slides.length - slidesPerView, 0);
-        
-        // Ajusta o currentIndex se necessário
-        currentIndex = Math.min(currentIndex, maxIndex);
-        
-        // Define a largura dos slides
-        slides.forEach(slide => {
-            slide.style.flex = `0 0 ${slideWidth}%`;
-        });
-        
-        // Calcula o deslocamento
-        const offset = currentIndex * slideWidth;
-        wrapper.style.transform = `translateX(-${offset}%)`;
-    }
+        if (!wrapper || !slides) return;
 
-    function nextSlide() {
-        const slidesPerView = getSlidesPerView();
-        const maxIndex = Math.max(slides.length - slidesPerView, 0);
-        currentIndex = (currentIndex + 1) > maxIndex ? 0 : currentIndex + 1;
+        function updateCarousel() {
+            // Calcula quantos slides são necessários
+            slidesPerView = getSlidesPerView();
+            const slideWidth = 100 / slidesPerView;
+            const maxIndex = Math.max(slides.length - slidesPerView, 0);
+            
+            currentIndex = Math.min(currentIndex, maxIndex);
+            
+            // Ajusta a largura dos slides
+            slides.forEach(slide => {
+                slide.style.flex = `0 0 ${slideWidth}%`;
+            });
+            
+            // Move o carrossel
+            const offset = currentIndex * slideWidth;
+            wrapper.style.transform = `translateX(-${offset}%)`;
+            
+            // Mostra/esconde botões
+            const shouldShowButtons = itemCount > slidesPerView;
+            prevButton.style.display = shouldShowButtons ? 'block' : 'none';
+            nextButton.style.display = shouldShowButtons ? 'block' : 'none';
+        }
+
+        function getSlidesPerView() {
+            const width = window.innerWidth;
+            if (width >= 1640) return 5;
+            if (width >= 1420) return 4;
+            if (width >= 1010) return 3;
+            if (width >= 400) return 2;
+            return 1;
+        }
+
+        function nextSlide() {
+            const maxIndex = Math.max(slides.length - slidesPerView, 0);
+            currentIndex = (currentIndex + 1) > maxIndex ? 0 : currentIndex + 1;
+            updateCarousel();
+        }
+
+        function prevSlide() {
+            const maxIndex = Math.max(slides.length - slidesPerView, 0);
+            currentIndex = (currentIndex - 1) < 0 ? maxIndex : currentIndex - 1;
+            updateCarousel();
+        }
+
+        // Configura eventos
+        nextButton.addEventListener('click', nextSlide);
+        prevButton.addEventListener('click', prevSlide);
+        window.addEventListener('resize', updateCarousel);
+
+        // Inicializa
         updateCarousel();
     }
 
-    function prevSlide() {
-        const slidesPerView = getSlidesPerView();
-        const maxIndex = Math.max(slides.length - slidesPerView, 0);
-        currentIndex = (currentIndex - 1) < 0 ? maxIndex : currentIndex - 1;
-        updateCarousel();
-    }
-
-    document.querySelector('.next').addEventListener('click', nextSlide);
-    document.querySelector('.prev').addEventListener('click', prevSlide);
-
-    window.addEventListener('resize', updateCarousel);
-    window.addEventListener('load', updateCarousel);
-    
-    // Inicializa o carrossel
-    updateCarousel();
+    window.initializeCarousel = initializeCarousel;
 })();
 </script>
