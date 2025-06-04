@@ -1,0 +1,39 @@
+@page "/Piece/Create"
+
+<div class="container">
+    <div>    
+        <MainTitle Title="Create Piece"/>
+    </div>
+
+    <div class="main-content">
+        <BlockTextCreate Category="@GetCategory" Description="@GetDescription"/>
+        <AnalogImageCreate Image="@Image"/>
+    </div>
+</div>
+
+
+
+@code {
+    
+    public string? Category { get; set; }
+
+    public string? Description { get; set; }
+
+    public string? Image { get; set; }
+
+    private void GetImage(string content)
+    {
+        Image = content;
+    }
+
+    private void GetDescription(string content)
+    {
+        Description = content;
+    }
+
+        private void GetCategory(string content)
+    {
+        Category = content;
+    }
+
+}
