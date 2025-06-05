@@ -1,14 +1,13 @@
 @page "/Piece/Create"
 
 <div class="container">
+    <SearchBar/>
+
     <div>    
         <MainTitle Title="Create Piece"/>
     </div>
 
-    <div class="main-content">
-        <BlockTextCreate Category="@GetCategory" Description="@GetDescription"/>
-        <AnalogImageCreate Image="@Image"/>
-    </div>
+        <FormCreate Category="@GetCategory" Description="@GetDescription" Image="@GetImage"/>
 </div>
 
 
