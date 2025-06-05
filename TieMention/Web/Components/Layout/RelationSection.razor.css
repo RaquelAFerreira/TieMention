@@ -73,7 +73,7 @@
 }
 
 .slide-image {
-    width: 100%;
+    width: 300px;
     height: 180px;
     object-fit: cover;
     border-width: 4px;
