@@ -68,7 +68,7 @@
     padding: 15px !important;
     border-radius: 4px !important;
     min-height: 250px;  
-    height: 290px;     
+    height: 290px  !important;     
     width: 100%;
     resize: vertical;   
     font-size: 1rem;
@@ -77,7 +77,7 @@
 
 .description-input:focus {
     background-color: #111 !important;
-    border-color: #056933 !important;
+    border-color: #74a814 !important;
     box-shadow: #111 !important;
 }
 
@@ -96,7 +96,7 @@
 
 .name-input:focus {
     background-color: #111 !important;
-    border-color: #056933 !important;
+    border-color: #74a814 !important;
     box-shadow: #111 !important;
 }
 
