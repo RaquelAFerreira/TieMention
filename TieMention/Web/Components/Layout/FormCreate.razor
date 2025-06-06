@@ -1,94 +1,84 @@
-<div class="main-content">
-    <div class="text-content">
-        <form @onsubmit="HandleSubmit">
+@rendermode InteractiveServer
+
+<EditForm Model="@formModel" OnValidSubmit="HandleSubmit" FormName="plain-form">
+    <div class="main-content">
+        <div class="text-content">
             <div class="text-block preserve-line-breaks">
                 <div class="green-bar"></div>
                 <div class="text-section">
                     <div class="form-group">
-                        <select @bind="categoryValue" class="form-control" style="background-color: black; border: 1px solid #333;">
+                        <InputSelect @bind-Value="formModel.Category" class="form-control" style="background-color: black; border: 1px solid #333;">
                             <option value="">Category</option>
                             <option value="Movie">Movie</option>
                             <option value="TV Show">TV Show</option>
                             <option value="Documentary">Documentary</option>
                             <option value="Animation">Animation</option>
                             <option value="Short Film">Short Film</option>
-                        </select>
+                        </InputSelect>
                     </div>
                     <div class="form-group">
-                        <select @bind="releaseYearValue" class="form-control" style="background-color: black; border: 1px solid #333;">
+                        <InputSelect @bind-Value="formModel.ReleaseYear" class="form-control" style="background-color: black; border: 1px solid #333;">
                             <option value="">Release Year</option>
                             @foreach (var year in availableYears)
                             {
                                 <option value="@year">@year</option>
                             }
-                        </select>
+                        </InputSelect>
                     </div>
                 </div>
             </div>
+
             <div class="text-block">
                 <div class="green-bar tall"></div>
                 <div class="text-section tall">
                     <div class="form-group description-group">
                         <label>Name:</label>
-                        <textarea @bind="nameValue" class="form-control name-input"></textarea>
+                        <InputTextArea @bind-Value="formModel.Name" class="form-control name-input" style="background-color: black; border: 1px solid #74a814;" />
+
                         <label>Description:</label>
-                        <textarea @bind="descriptionValue" class="form-control description-input"></textarea>
+                        <InputTextArea @bind-Value="formModel.Description" class="form-control description-input" style="height: 290px; background-color: black; border: 1px solid #74a814;" />
                     </div>
                 </div>
             </div>
-        </form>
+        </div>
+
+        <div class="main-container">
+            <div class="image-container">
+                <div class="image-border outer"></div>
+                <div class="image-border inner"></div>
+                @* <img src="@formModel.Image" class="main-image"> *@
+            </div> 
+            
+            <div class="analog-button-container">
+                <button type="button" class="analog-button">+</button>
+                <button type="button" class="analog-button">-</button>
+            </div>        
+            <InputTextArea @bind-Value="formModel.Image" class="form-control name-input"  style="background-color: black; border: 1px solid #74a814;" />
+        </div>
     </div>
 
-    <div class="main-container">
-        <div class="image-container">
-            <div class="image-border outer"></div>
-            <div class="image-border inner"></div>
-            @* <img src="@Image" class="main-image"> *@
-        </div> 
-        
-        <div class="analog-button-container">
-            <button class="analog-button">+</button>
-            <button class="analog-button">-</button>
-        </div>        
-        <textarea @bind="descriptionValue" class="form-control name-input"></textarea>
-
+    <div class="button-container">
+        <button type="submit" class="btn-submit">Submit</button>
     </div>
-</div>
-
-<div class="button-container">
-    <button type="submit" class="btn-submit">Submit</button>
-</div>
+</EditForm>
 
 @code {
-    private string imageValue;
-    private string nameValue;
-    private string categoryValue;
-    private string releaseYearValue;
-    private string descriptionValue;
-    private List<int> availableYears = new List<int>();
+    private FormModel formModel = new();
+    private List<int> availableYears = new();
 
-    [Parameter]
-    public EventCallback<string?> Category { get; set; }
-
-    [Parameter]
-    public EventCallback<string?> ReleaseYear { get; set; }
-
-    [Parameter]
-    public EventCallback<string?> Description { get; set; }
-
-    [Parameter]
-    public EventCallback<string?> Name { get; set; }
-
-    [Parameter]
-    public EventCallback<string?> Image { get; set; }
+    [Parameter] public EventCallback<string?> Category { get; set; }
+    [Parameter] public EventCallback<string?> ReleaseYear { get; set; }
+    [Parameter] public EventCallback<string?> Description { get; set; }
+    [Parameter] public EventCallback<string?> Name { get; set; }
+    [Parameter] public EventCallback<string?> Image { get; set; }
 
     private async Task HandleSubmit()
     {
-        await Image.InvokeAsync(imageValue);
-        await Name.InvokeAsync(nameValue);
-        await Category.InvokeAsync(categoryValue);
-        await ReleaseYear.InvokeAsync(releaseYearValue);
-        await Description.InvokeAsync(descriptionValue);
+        await Image.InvokeAsync(formModel.Image);
+        await Name.InvokeAsync(formModel.Name);
+        await Category.InvokeAsync(formModel.Category);
+        await ReleaseYear.InvokeAsync(formModel.ReleaseYear);
+        await Description.InvokeAsync(formModel.Description);
     }
 
     protected override void OnInitialized()
@@ -98,5 +88,14 @@
         {
             availableYears.Add(year);
         }
+    }
+
+    private class FormModel
+    {
+        public string? Image { get; set; }
+        public string? Name { get; set; }
+        public string? Category { get; set; }
+        public string? ReleaseYear { get; set; }
+        public string? Description { get; set; }
     }
 }
