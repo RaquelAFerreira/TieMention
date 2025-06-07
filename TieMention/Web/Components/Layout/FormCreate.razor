@@ -62,9 +62,25 @@
     </div>
 </EditForm>
 
+@if (isModalVisible)
+{
+    <div class="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50">
+        <div class="bg-black border-2 border-[#74a814] rounded-xl shadow-neon p-6 w-full max-w-sm font-mono text-[#74a814]">
+            <h2 class="text-2xl font-bold mb-4 drop-shadow-neon">⚡ Piece Created ⚡</h2>
+            <p class="mb-6">The Piece will be approved by our staff</p>
+            <button class="bg-[#74a814] text-black px-5 py-2 rounded shadow-neon hover:brightness-125 transition"
+                    @onclick="() => isModalVisible = false">
+                OK
+            </button>
+        </div>
+    </div>
+}
+
 @code {
     private FormModel formModel = new();
     private List<int> availableYears = new();
+
+    private bool isModalVisible;
 
     [Parameter] public EventCallback<string?> Category { get; set; }
     [Parameter] public EventCallback<string?> ReleaseYear { get; set; }
@@ -79,6 +95,13 @@
         await Category.InvokeAsync(formModel.Category);
         await ReleaseYear.InvokeAsync(formModel.ReleaseYear);
         await Description.InvokeAsync(formModel.Description);
+
+        isModalVisible = true;
+
+        await Task.Delay(3000);
+        isModalVisible = false;
+
+        formModel = new();
     }
 
     protected override void OnInitialized()
@@ -89,13 +112,13 @@
             availableYears.Add(year);
         }
     }
-
+ 
     private class FormModel
     {
         public string? Image { get; set; }
         public string? Name { get; set; }
         public string? Category { get; set; }
-        public string? ReleaseYear { get; set; }
+        public string? ReleaseYear { get; set; } 
         public string? Description { get; set; }
     }
 }
