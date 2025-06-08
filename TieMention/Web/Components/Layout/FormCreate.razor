@@ -9,7 +9,7 @@
                     <div class="form-group">
                         <InputSelect @bind-Value="formModel.Category" class="form-control" style="background-color: black; border: 1px solid #333;">
                             <option value="">Category</option>
-                            <option value="Movie">Movie</option>
+                            <option value="8fdd1365-865f-4fe1-8e59-f7a06a64f9bb">Movie</option>
                             <option value="TV Show">TV Show</option>
                             <option value="Documentary">Documentary</option>
                             <option value="Animation">Animation</option>
@@ -79,30 +79,10 @@
 @code {
     private FormModel formModel = new();
     private List<int> availableYears = new();
-
     private bool isModalVisible;
 
-    [Parameter] public EventCallback<string?> Category { get; set; }
-    [Parameter] public EventCallback<string?> ReleaseYear { get; set; }
-    [Parameter] public EventCallback<string?> Description { get; set; }
-    [Parameter] public EventCallback<string?> Name { get; set; }
-    [Parameter] public EventCallback<string?> Image { get; set; }
-
-    private async Task HandleSubmit()
-    {
-        await Image.InvokeAsync(formModel.Image);
-        await Name.InvokeAsync(formModel.Name);
-        await Category.InvokeAsync(formModel.Category);
-        await ReleaseYear.InvokeAsync(formModel.ReleaseYear);
-        await Description.InvokeAsync(formModel.Description);
-
-        isModalVisible = true;
-
-        await Task.Delay(3000);
-        isModalVisible = false;
-
-        formModel = new();
-    }
+    [Parameter] 
+    public EventCallback<FormModel> OnSubmit { get; set; }
 
     protected override void OnInitialized()
     {
@@ -112,13 +92,21 @@
             availableYears.Add(year);
         }
     }
- 
-    private class FormModel
+
+    private async Task HandleSubmit()
     {
-        public string? Image { get; set; }
-        public string? Name { get; set; }
-        public string? Category { get; set; }
-        public string? ReleaseYear { get; set; } 
-        public string? Description { get; set; }
+        await OnSubmit.InvokeAsync(formModel);
+    }
+
+    // Method to show the success modal from parent
+    public async Task ShowSuccessModal()
+    {
+        isModalVisible = true;
+        StateHasChanged();
+        
+        await Task.Delay(3000);
+        isModalVisible = false;
+        formModel = new();
+        StateHasChanged();
     }
 }
