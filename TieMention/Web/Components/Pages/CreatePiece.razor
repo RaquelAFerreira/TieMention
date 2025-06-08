@@ -1,4 +1,6 @@
 @rendermode InteractiveServer
+@inject HttpClient Http
+
 
 @page "/Piece/Create"
 
@@ -9,32 +11,40 @@
         <MainTitle Title="Create Piece"/>
     </div>
 
-        <FormCreate Category="@GetCategory" Description="@GetDescription" Image="@GetImage"/>
+    <FormCreate 
+        OnSubmit="HandleFormSubmit"
+        @ref="formCreateComponent"/>
 </div>
 
 
 
 @code {
+    private FormCreate? formCreateComponent;
     
-    public string? Category { get; set; }
-
-    public string? Description { get; set; }
-
-    public string? Image { get; set; }
-
-    private void GetImage(string content)
+    private async Task HandleFormSubmit(FormModel content)
     {
-        Image = content;
+        try
+        {
+            // Call your API endpoint here
+            var response = await Http.PostAsJsonAsync("api/piece", content);
+            
+            if (response.IsSuccessStatusCode)
+            {
+                // Handle success
+                if (formCreateComponent != null)
+                {
+                    await formCreateComponent.ShowSuccessModal();
+                }
+            }
+            else
+            {
+                // Handle error
+                Console.WriteLine($"Error: {response.StatusCode}");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Exception: {ex.Message}");
+        }
     }
-
-    private void GetDescription(string content)
-    {
-        Description = content;
-    }
-
-        private void GetCategory(string content)
-    {
-        Category = content;
-    }
-
 }
