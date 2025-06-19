@@ -2,7 +2,7 @@ namespace TieMention.Models;
 
 using System.ComponentModel.DataAnnotations;
 
-public class FormModel
+public class FormPieceModel
 {
     [Required]
     public string? Image { get; set; }

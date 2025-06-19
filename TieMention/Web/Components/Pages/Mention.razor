@@ -8,7 +8,7 @@
     <SearchBar/>
 
     <div>    
-        <MainTitle Title="Barbie mentions Matrix"/>
+        <MainTitle Title="@Title"/>
     </div>
     @if(MentionDetails != null)
     {
@@ -31,6 +31,9 @@
     private String? HeadText;
 
     private String? BodyText;
+
+    private String? Title;
+
     private MentionDetailsDto? MentionDetails;
 
     [Parameter]
@@ -45,5 +48,7 @@
                  + "Release Years: " + MentionDetails.MentionerPiece.ReleaseYear + " and " + MentionDetails.MentionedPiece.ReleaseYear;
 
         BodyText = MentionDetails.Description;
+
+        Title = @MentionDetails.MentionerPiece.Name + " mentions " + MentionDetails.MentionedPiece.Name;
     }
 }
