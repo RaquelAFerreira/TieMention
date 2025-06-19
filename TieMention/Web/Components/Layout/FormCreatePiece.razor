@@ -1,4 +1,5 @@
 @rendermode InteractiveServer
+@inject CategoryService CategoryService
 
 <EditForm Model="@formModel" OnValidSubmit="HandleSubmit" FormName="plain-form">
     <div class="main-content">
@@ -9,11 +10,13 @@
                     <div class="form-group">
                         <InputSelect @bind-Value="formModel.Category" class="form-control" style="background-color: black; border: 1px solid #333;">
                             <option value="">Category</option>
-                            <option value="8fdd1365-865f-4fe1-8e59-f7a06a64f9bb">Movie</option>
-                            <option value="TV Show">TV Show</option>
-                            <option value="Documentary">Documentary</option>
-                            <option value="Animation">Animation</option>
-                            <option value="Short Film">Short Film</option>
+                            @if (Categories != null)
+                            {
+                                @foreach (var category in Categories)
+                                {
+                                    <option value="@category?.Id">@category?.Description</option>
+                                }
+                            }
                         </InputSelect>
                     </div>
                     <div class="form-group">
@@ -77,15 +80,23 @@
 }
 
 @code {
-    private FormModel formModel = new();
+    private FormPieceModel formModel = new();
     private List<int> availableYears = new();
     private bool isModalVisible;
 
+    private List<CategoryDto?> Categories = new();
+
     [Parameter] 
-    public EventCallback<FormModel> OnSubmit { get; set; }
+    public EventCallback<FormPieceModel> OnSubmit { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        Categories = await CategoryService.GetCategoriesAsync();
+    }
 
     protected override void OnInitialized()
     {
+        
         int currentYear = DateTime.Now.Year;
         for (int year = currentYear; year >= currentYear - 120; year--)
         {
@@ -98,7 +109,6 @@
         await OnSubmit.InvokeAsync(formModel);
     }
 
-    // Method to show the success modal from parent
     public async Task ShowSuccessModal()
     {
         isModalVisible = true;

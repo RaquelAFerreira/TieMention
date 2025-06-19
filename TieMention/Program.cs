@@ -11,6 +11,7 @@ builder.Services.AddRazorComponents()
 
 builder.Services.AddScoped<PieceService>();
 builder.Services.AddScoped<MentionService>();
+builder.Services.AddScoped<CategoryService>();
 
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri("http://localhost:5105/") });
 

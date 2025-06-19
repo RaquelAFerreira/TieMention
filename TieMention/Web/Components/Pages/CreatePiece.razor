@@ -11,29 +11,28 @@
         <MainTitle Title="Create Piece"/>
     </div>
 
-    <FormCreate 
+    <FormCreatePiece 
         OnSubmit="HandleFormSubmit"
-        @ref="formCreateComponent"/>
+        @ref="FormCreatePieceComponent"/>
 </div>
 
 
 
 @code {
-    private FormCreate? formCreateComponent;
+    private FormCreatePiece? FormCreatePieceComponent;
     
-    private async Task HandleFormSubmit(FormModel content)
+    private async Task HandleFormSubmit(FormPieceModel content)
     {
         try
         {
-            // Call your API endpoint here
             var response = await Http.PostAsJsonAsync("api/piece", content);
             
             if (response.IsSuccessStatusCode)
             {
                 // Handle success
-                if (formCreateComponent != null)
+                if (FormCreatePieceComponent != null)
                 {
-                    await formCreateComponent.ShowSuccessModal();
+                    await FormCreatePieceComponent.ShowSuccessModal();
                 }
             }
             else
