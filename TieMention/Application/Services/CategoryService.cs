@@ -1,4 +1,4 @@
-using TieMention.Models;
+using  TieMention.Application.DTOs;
 using System.Net.Http.Json;
 
 namespace TieMention.Services;
