@@ -1,4 +1,4 @@
-namespace TieMention.Models;
+namespace  TieMention.Application.DTOs;
 
 public class PieceListDto
 {
