@@ -3,14 +3,11 @@
     flex-direction: column;
     row-gap: 1rem;
     height: auto;
-}
 
-@media (min-width: 768px) {
-    .text-content {
         grid-column: span 7 / span 7;
         height: 600px;
         margin-right: 50px;
-    }
+
 }
 
 .text-block {

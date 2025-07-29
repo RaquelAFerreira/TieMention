@@ -1,38 +1,29 @@
 .container {
-  min-height: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 0.625rem;
-  padding-right: 0.625rem;
-  max-width: 150rem;
-  margin-top: 60px;
+  margin: 0 auto;
+  max-width: 900px;
+  width: 100%;
 }
 
 .body-container {
   background-color: #000000;
   color: #74a814;
-  padding: 1.5rem; /* 6 units in Tailwind typically equals 1.5rem or 24px */
-}
-
-@media (min-width: 768px) {
-  .container {
-    min-height: 1000px;
-  }
+  padding: 0 1.5rem; /* Só nas laterais agora */
 }
 
 .main-content {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-    margin-top: 70px;
+  display: grid;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  margin-top: 70px;
+  gap: 1rem;
 }
 
-@media (min-width: 768px) {
-    .main-content {
-        grid-template-columns: repeat(12, minmax(0, 1fr));
-        font-size: 1.25rem;
-        line-height: 1.75rem;
-    }
+@media (min-width: 1024px) {
+  .main-content {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    gap: 1.5rem;
+  }
 }
+
