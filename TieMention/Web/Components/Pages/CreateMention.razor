@@ -1,0 +1,49 @@
+@rendermode InteractiveServer
+@inject HttpClient Http
+
+
+@page "/Mention/Create"
+
+<div class="container">
+    <SearchBar/>
+
+    <div>    
+        <MainTitle Title="Create Mention"/>
+    </div>
+
+    <FormCreateMention 
+        OnSubmit="HandleFormSubmit"
+        @ref="FormCreateMentionComponent"/>
+</div>
+
+
+
+@code {
+    private FormCreateMention? FormCreateMentionComponent;
+    
+    private async Task HandleFormSubmit(FormMentionModel content)
+    {
+        try
+        {
+            var response = await Http.PostAsJsonAsync("api/mention", content);
+            
+            if (response.IsSuccessStatusCode)
+            {
+                // Handle success
+                if (FormCreateMentionComponent != null)
+                {
+                    await FormCreateMentionComponent.ShowSuccessModal();
+                }
+            }
+            else
+            {
+                // Handle error
+                Console.WriteLine($"Error: {response.StatusCode}");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Exception: {ex.Message}");
+        }
+    }
+}

@@ -1,5 +1,7 @@
 @rendermode InteractiveServer
 
+@inject MentionService MentionService
+
 <EditForm Model="@formModel" OnValidSubmit="HandleSubmit" FormName="mention-form">
     <div class="main-content">
         <div class="text-content">
@@ -70,10 +72,35 @@
     private FormMentionModel formModel = new();
     private bool isModalVisible;
 
+    private string searchTerm = "";
     private List<PieceComboboxDto?> MentionerPieces = new();
+
+    private async Task OnSearchChanged(ChangeEventArgs e)
+    {
+        searchTerm = e.Value?.ToString() ?? "";
+
+        if (!string.IsNullOrWhiteSpace(searchTerm) && searchTerm.Length >= 2)
+        {
+            MentionerPieces = await MentionService.GetMentionByNameAsync(searchTerm);
+        }
+        else
+        {
+            MentionerPieces.Clear();
+        }
+    }
+
+    private void SelectMentionerPiece(PieceComboboxDto? selected)
+    {
+        if (selected is null) return;
+
+        formModel.MentionerPiece = selected.Id;
+        searchTerm = selected.Name;
+        MentionerPieces.Clear();
+    }
 
     [Parameter] 
     public EventCallback<FormMentionModel> OnSubmit { get; set; }
+
 
     private async Task HandleSubmit()
     {

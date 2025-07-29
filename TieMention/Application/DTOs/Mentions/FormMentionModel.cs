@@ -11,7 +11,7 @@ public class FormMentionModel
     public string? Name { get; set; }
 
     [Required]
-    public string? MentionerPiece { get; set; }
+    public Guid? MentionerPiece { get; set; }
 
     [MaxLength(1000)]
     public string? Description { get; set; }
