@@ -1,0 +1,272 @@
+.text-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    height: auto;
+}
+
+@media (min-width: 768px) {
+    .text-content {
+        grid-column: span 7 / span 7;
+        height: 600px;
+        margin-right: 50px;
+    }
+}
+
+.text-block {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    align-items: flex-start;
+}
+
+.text-block:first-child {
+    margin-bottom: 70px;
+}
+
+.green-bar {
+    grid-column: span 2 / span 2;
+    height: 90px;
+    width: 100px;
+    background-color: #74a814;
+}
+
+.green-bar.tall {
+    height: 430px;
+}
+
+.text-section {
+    grid-column: span 10 / span 10;
+    max-height: 90px;
+    overflow: auto;
+    text-align: left;
+    margin-left: -1rem;
+}
+
+.text-section.tall {
+    max-height: 430px;
+}
+
+@media (min-width: 768px) {
+    .text-section {
+        text-align: justify;
+    }
+}
+
+.preserve-line-breaks {
+    white-space: pre-line;
+}
+
+.description-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.description-input {
+    background-color: black !important;
+    border: 1px solid #333 !important;
+    padding: 15px !important;
+    border-radius: 4px !important;
+    min-height: 250px;  
+    height: 290px  !important;     
+    width: 100%;
+    resize: vertical;   
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.description-input:focus {
+    background-color: #111 !important;
+    border-color: #74a814 !important;
+    box-shadow: #111 !important;
+}
+
+.name-input {
+    background-color: black !important;
+    border: 1px solid #333 !important;
+    padding: 15px !important;
+    border-radius: 4px !important;
+    min-height: 50px; 
+    height: 50px;     
+    width: 100%;
+    resize: vertical;  
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.name-input:focus {
+    background-color: #111 !important;
+    border-color: #74a814 !important;
+    box-shadow: #111 !important;
+}
+
+.image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 620px;
+}
+
+@media (min-width: 768px) {
+    .image-container {
+        grid-column: span 5 / span 5;
+        height: 600px;
+        padding: 3.5rem;
+    }
+}
+
+.image-border {
+    position: absolute;
+    border-width: 4px;
+    border-color: #74a814;
+    border-style: solid;
+}
+
+.image-border.outer {
+    left: 1rem;
+    bottom: 50px;
+    width: calc(100% - 1rem);
+    height: 550px;
+}
+
+@media (min-width: 768px) {
+    .image-border.outer {
+        left: 2rem;
+        width: 560px;
+    }
+}
+
+.image-border.inner {
+    width: 100%;
+    height: calc(100% - 1rem);
+}
+
+@media (min-width: 768px) {
+    .image-border.inner {
+        top: 0.9375rem;
+        height: 515px;
+    }
+}
+
+.main-image {
+    width: 100%;
+    height: 100%;
+    bottom: 30px;
+    padding-bottom: 50px;
+    object-fit: cover;
+}
+
+@media (min-width: 768px) {
+    .main-image {
+        width: 950px;
+        height: 520px;
+    }
+}
+    .main-container {
+    /* display: flex; */
+    /* flex-direction: column; */
+    align-items: center;
+    width: 775px;
+    /* max-width: fit-content; */
+    margin: 20px auto;
+}
+
+
+.analog-button-container {
+    display: flex;
+    justify-content: right; 
+    gap: 10px;
+    margin-top: -30px; 
+    margin-left: 20px; 
+    width: calc(100% - 40px); 
+    position: relative;
+}
+
+/* Mantenha o restante do seu CSS igual */
+
+@media (min-width: 768px) {
+    .analog-button-container {
+        margin-top: -40px; 
+        width: 560px;
+    }
+}
+
+.analog-button {
+    width: 30px;
+    height: 30px;
+    /* border-radius: 50%; */
+    background-color: #74a814;
+    border: none;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.analog-button:hover {
+    background-color: #74a814;
+    transform: scale(1.05);
+}
+
+.analog-button:active {
+    transform: scale(0.95);
+} 
+
+.name-input {
+    background-color: black !important;
+    border: 1px solid #333 !important;
+    padding: 15px !important;
+    border-radius: 4px !important;
+    min-height: 50px; 
+    height: 50px;     
+    width: 100%;
+    resize: vertical;  
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.btn-submit {
+    width: 200px; 
+    height: 50px; 
+    border: 2px solid #74a814; 
+    background-color: black;
+    color: #74a814;
+    font-weight: bold;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-submit:hover {
+    background-color: #74a814;
+    color: black;
+}
+
+.btn-submit:active {
+    transform: scale(0.98);
+}
+
+/* .app-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+} */
