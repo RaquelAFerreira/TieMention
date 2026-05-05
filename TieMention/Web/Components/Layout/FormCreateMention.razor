@@ -1,34 +1,49 @@
 @rendermode InteractiveServer
-
 @inject MentionService MentionService
+
+@inject IJSRuntime JSRuntime
+
 
 <EditForm Model="@formModel" OnValidSubmit="HandleSubmit" FormName="mention-form">
     <div class="main-content">
         <div class="text-content">
             <div class="text-block preserve-line-breaks">
                 <div class="green-bar"></div>
-                <div class="text-section">
+                <div class="text-section" style="overflow: visible;">
                     <div class="form-group">
-                        <InputSelect @bind-Value="formModel.MentionerPiece" class="form-control" style="background-color: black; border: 1px solid #333;">
-                            <option value="">Mentioner Piece</option>
-                            @if (MentionerPieces != null)
+                        <label>Mentioner Piece:</label>
+                        <div class="combobox-container">
+                            <input type="text" 
+                                   class="form-control" 
+                                   style="background-color: black; border: 1px solid #333;"
+                                   @bind="searchTerm"
+                                   @oninput="OnInputChanged"
+                                   placeholder="Search for a piece..."/>
+                            
+                            @if (showDropdown && MentionerPieces.Any())
                             {
-                                @foreach (var mentionerPiece in MentionerPieces)
-                                {
-                                    <option value="@mentionerPiece?.Id">@mentionerPiece?.Name</option>
-                                }
+                                <div class="combobox-dropdown">
+                                    @foreach (var mentionerPiece in MentionerPieces)
+                                    {
+                                        <div class="combobox-item" 
+                                             @onclick="() => SelectMentionerPiece(mentionerPiece)">
+                                            @mentionerPiece?.Name
+                                        </div>
+                                    }
+                                </div>
                             }
-                        </InputSelect>
+                        </div>
+                        <input type="hidden" @bind="formModel.MentionerPiece" />
                     </div>
                 </div>
             </div>
 
             <div class="text-block">
                 <div class="green-bar tall"></div>
-                <div class="text-section tall">
+                <div class="text-section tall" style="overflow: visible;">
                     <div class="form-group description-group">
                         <label>Description:</label>
-                        <InputTextArea @bind-Value="formModel.Description" class="form-control description-input" style="height: 290px; background-color: black; border: 1px solid #74a814;" />
+                        <InputTextArea @bind-Value="formModel.Description" class="form-control description-input" />
                     </div>
                 </div>
             </div>
@@ -38,14 +53,13 @@
             <div class="image-container">
                 <div class="image-border outer"></div>
                 <div class="image-border inner"></div>
-                @* <img src="@formModel.Image" class="main-image"> *@
             </div> 
             
             <div class="analog-button-container">
                 <button type="button" class="analog-button">+</button>
                 <button type="button" class="analog-button">-</button>
             </div>        
-            <InputTextArea @bind-Value="formModel.Image" class="form-control name-input"  style="background-color: black; border: 1px solid #74a814;" />
+            <InputTextArea @bind-Value="formModel.Image" class="form-control name-input" />
         </div>
     </div>
 
@@ -56,37 +70,42 @@
 
 @if (isModalVisible)
 {
-    <div class="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50">
-        <div class="bg-black border-2 border-[#74a814] rounded-xl shadow-neon p-6 w-full max-w-sm font-mono text-[#74a814]">
-            <h2 class="text-2xl font-bold mb-4 drop-shadow-neon">⚡ Piece Created ⚡</h2>
-            <p class="mb-6">The Piece will be approved by our staff</p>
-            <button class="bg-[#74a814] text-black px-5 py-2 rounded shadow-neon hover:brightness-125 transition"
-                    @onclick="() => isModalVisible = false">
+    <div class="modal-overlay">
+        <div class="modal-content">
+            <h2>⚡ Piece Created ⚡</h2>
+            <p>The Piece will be approved by our staff</p>
+            <button @onclick="CloseModal">
                 OK
             </button>
         </div>
     </div>
 }
-
 @code {
     private FormMentionModel formModel = new();
     private bool isModalVisible;
-
+    private bool showDropdown;
     private string searchTerm = "";
     private List<PieceComboboxDto?> MentionerPieces = new();
 
-    private async Task OnSearchChanged(ChangeEventArgs e)
+    private void OnInputChanged(ChangeEventArgs e)
     {
         searchTerm = e.Value?.ToString() ?? "";
+        _ = OnSearchChanged(); // Chama o método assíncrono
+    }
 
+    private async Task OnSearchChanged()
+    {
         if (!string.IsNullOrWhiteSpace(searchTerm) && searchTerm.Length >= 2)
         {
             MentionerPieces = await MentionService.GetMentionByNameAsync(searchTerm);
+            showDropdown = true;
         }
         else
         {
             MentionerPieces.Clear();
+            showDropdown = false;
         }
+        StateHasChanged();
     }
 
     private void SelectMentionerPiece(PieceComboboxDto? selected)
@@ -95,12 +114,19 @@
 
         formModel.MentionerPiece = selected.Id;
         searchTerm = selected.Name;
-        MentionerPieces.Clear();
+        showDropdown = false;
+        StateHasChanged();
     }
 
-    [Parameter] 
-    public EventCallback<FormMentionModel> OnSubmit { get; set; }
+    private void CloseModal()
+    {
+        isModalVisible = false;
+        formModel = new();
+        StateHasChanged();
+    }
 
+    [Parameter]
+    public EventCallback<FormMentionModel> OnSubmit { get; set; }
 
     private async Task HandleSubmit()
     {
@@ -113,8 +139,6 @@
         StateHasChanged();
         
         await Task.Delay(3000);
-        isModalVisible = false;
-        formModel = new();
-        StateHasChanged();
+        CloseModal();
     }
 }

@@ -30,7 +30,7 @@ public class MentionService
     public async Task<List<PieceComboboxDto?>> GetMentionByNameAsync(string Name)
     {
 
-        var url = $"http://localhost:5105/api/mention/{Name}";
+        var url = $"http://localhost:5105/api/piece/search/{Name}";
 
         var request = new HttpRequestMessage(HttpMethod.Get, url);
         var response = await _http.SendAsync(request);
