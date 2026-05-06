@@ -14,7 +14,10 @@
     {
         <div class="main-content">
             <BlockText Head="@HeadText" Text="@BodyText"/>
-            <AnalogImage Image="@MentionDetails.Image"/>
+            <AnalogImage 
+                Image="@MentionDetails.Image"
+                MentionedPieceId="@MentionDetails.MentionedPiece.Id"
+                MentionedPieceName="@MentionDetails.MentionedPiece.Name"/>
         </div>
     
 

@@ -12,6 +12,11 @@
     font-size: 1.875rem;
     line-height: 2.25rem;
     text-align: center;
+    color: #74a814;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: max-content;
+    padding: 0 0.75rem;
 }
 
 @media (min-width: 768px) {
@@ -24,6 +29,9 @@
     font-size: 1.5rem;
     line-height: 2rem;
     margin-top: 1.25rem;
+    background-color: #102408;
+    color: #8fcf23;
+    padding: 0.5rem 1rem;
 }
 
 @media (min-width: 768px) {
@@ -74,13 +82,13 @@
 
 .slide-image {
     width: 300px;
-    height: 180px;
+    height: 250px;
     object-fit: cover;
     border-width: 4px;
     border-color: #74a814;
     border-style: solid;
     padding: 0.25rem;
-    max-width: 100%; 
+    box-sizing: border-box;
 }
 
 @media (min-width: 768px) {
@@ -90,10 +98,16 @@
 }
 
 .slide-title {
+    width: 300px;
+    box-sizing: border-box;
     font-size: 1.125rem;
     line-height: 1.75rem;
     text-align: center;
     margin-top: 0.5rem;
+    background-color: #74a814;
+    border: 1px solid #8fcf23;
+    color: #000000;
+    padding: 0.35rem 0.5rem;
 }
 
 @media (min-width: 768px) {

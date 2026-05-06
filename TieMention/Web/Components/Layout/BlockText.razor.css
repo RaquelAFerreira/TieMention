@@ -33,14 +33,20 @@
 
 .text-section {
     grid-column: span 10 / span 10;
-    max-height: 90px;
+    box-sizing: border-box;
+    height: 90px;
     overflow: auto;
     text-align: left;
     margin-left: -1rem;
+    background-color: rgba(116, 168, 20, 0.08);
+    border-left: 3px solid #74a814;
+    color: #74a814;
+    padding: 1rem 2rem;
+    text-shadow: 0 0 4px rgba(116, 168, 20, 0.45);
 }
 
 .text-section.tall {
-    max-height: 430px;
+    height: 430px;
 }
 
 @media (min-width: 768px) {

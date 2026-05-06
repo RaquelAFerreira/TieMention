@@ -2,8 +2,8 @@
     display: grid;
     grid-template-columns: 1fr;
     text-align: center;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 70px;
 }
 
@@ -19,6 +19,10 @@
     margin-bottom: 1.5rem;
     font-size: 2.25rem;
     line-height: 2.5rem;
+    color: #74a814;
+    display: inline-block;
+    width: fit-content;
+    justify-self: center;
 }
 
 @media (min-width: 640px) {

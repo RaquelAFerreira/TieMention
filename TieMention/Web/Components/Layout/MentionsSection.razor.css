@@ -12,6 +12,10 @@
     font-size: 1.875rem;
     line-height: 2.25rem;
     text-align: center;
+    color: #74a814;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: max-content;
 }
 
 @media (min-width: 768px) {
@@ -24,6 +28,9 @@
     font-size: 1.5rem;
     line-height: 2rem;
     margin-top: 1.25rem;
+    background-color: #102408;
+    color: #8fcf23;
+    padding: 0.5rem 1rem;
 }
 
 @media (min-width: 768px) {

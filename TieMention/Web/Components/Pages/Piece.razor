@@ -24,13 +24,22 @@ else
 
     <div class="main-content">
         <BlockText Head="@HeadText" Text="@PieceService.PieceDetails.Description"/>
-        <AnalogImage Image="@PieceService.PieceDetails.Image"/>
+        <AnalogImage 
+            Image="@PieceService.PieceDetails.Image"
+            MentionedPieceId="@PieceService.PieceDetails.Id"
+            MentionedPieceName="@PieceService.PieceDetails.Name"/>
     </div>
     @if (Mentioners != null && Mentioners.Count != 0)
     {
         <div>
             <MentionsSection Head="Mentioned By" Content="@Mentioners"/>
         </div>        
+    }
+    @if (Mentioneds != null && Mentioneds.Count != 0)
+    {
+        <div>
+            <MentionsSection Head="Mentions" Content="@Mentioneds"/>
+        </div>
     }
 
 }
@@ -46,6 +55,8 @@ else
 
     public List<PieceMentionsDto?> Mentioners { get; set; }
 
+    public List<PieceMentionsDto?> Mentioneds { get; set; }
+
     protected override async Task OnInitializedAsync()
     {
         PieceService.ApiResponse += StateHasChanged;
@@ -56,6 +67,7 @@ else
         }
 
         Mentioners = await PieceService.GetMentionerPiecesAsync(PieceService.PieceDetails.Id);
+        Mentioneds = await PieceService.GetMentionedPiecesAsync(PieceService.PieceDetails.Id);
 
         HeadText = "Category: " + PieceService.PieceDetails.Category + "\r\n" + "Release Year: " + PieceService.PieceDetails.ReleaseYear;
     }

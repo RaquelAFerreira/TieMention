@@ -24,6 +24,12 @@
   height: 100px;
 }
 
+.navbar-logo-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
 .navbar-item {
   padding: 9px;
 }

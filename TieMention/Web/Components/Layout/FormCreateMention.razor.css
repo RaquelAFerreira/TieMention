@@ -40,6 +40,11 @@
     overflow: auto;
     text-align: left;
     margin-left: -1rem;
+    background-color: rgba(116, 168, 20, 0.08);
+    border-left: 3px solid #74a814;
+    color: #9bd32a;
+    padding: 0.85rem 1rem;
+    text-shadow: 0 0 4px rgba(116, 168, 20, 0.45);
 }
 
 .text-section.tall {

@@ -1,9 +1,6 @@
 @rendermode InteractiveServer
 @inject MentionService MentionService
 
-@inject IJSRuntime JSRuntime
-
-
 <EditForm Model="@formModel" OnValidSubmit="HandleSubmit" FormName="mention-form">
     <div class="main-content">
         <div class="text-content">
@@ -13,19 +10,19 @@
                     <div class="form-group">
                         <label>Mentioner Piece:</label>
                         <div class="combobox-container">
-                            <input type="text" 
-                                   class="form-control" 
+                            <input type="text"
+                                   class="form-control"
                                    style="background-color: black; border: 1px solid #333;"
-                                   @bind="searchTerm"
-                                   @oninput="OnInputChanged"
-                                   placeholder="Search for a piece..."/>
-                            
-                            @if (showDropdown && MentionerPieces.Any())
+                                   @bind="mentionerSearchTerm"
+                                   @oninput="OnMentionerInputChanged"
+                                   placeholder="Search for a piece..." />
+
+                            @if (showMentionerDropdown && MentionerPieces.Any())
                             {
                                 <div class="combobox-dropdown">
                                     @foreach (var mentionerPiece in MentionerPieces)
                                     {
-                                        <div class="combobox-item" 
+                                        <div class="combobox-item"
                                              @onclick="() => SelectMentionerPiece(mentionerPiece)">
                                             @mentionerPiece?.Name
                                         </div>
@@ -33,7 +30,44 @@
                                 </div>
                             }
                         </div>
-                        <input type="hidden" @bind="formModel.MentionerPiece" />
+                        <input type="hidden" @bind="formModel.MentionerPieceId" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Mentioned Piece:</label>
+                        @if (MentionedPieceId.HasValue)
+                        {
+                            <input type="text"
+                                   class="form-control"
+                                   style="background-color: black; border: 1px solid #333;"
+                                   value="@MentionedPieceName"
+                                   disabled />
+                        }
+                        else
+                        {
+                            <div class="combobox-container">
+                                <input type="text"
+                                       class="form-control"
+                                       style="background-color: black; border: 1px solid #333;"
+                                       @bind="mentionedSearchTerm"
+                                       @oninput="OnMentionedInputChanged"
+                                       placeholder="Search for a piece..." />
+
+                                @if (showMentionedDropdown && MentionedPieces.Any())
+                                {
+                                    <div class="combobox-dropdown">
+                                        @foreach (var mentionedPiece in MentionedPieces)
+                                        {
+                                            <div class="combobox-item"
+                                                 @onclick="() => SelectMentionedPiece(mentionedPiece)">
+                                                @mentionedPiece?.Name
+                                            </div>
+                                        }
+                                    </div>
+                                }
+                            </div>
+                        }
+                        <input type="hidden" @bind="formModel.MentionedPieceId" />
                     </div>
                 </div>
             </div>
@@ -53,12 +87,12 @@
             <div class="image-container">
                 <div class="image-border outer"></div>
                 <div class="image-border inner"></div>
-            </div> 
-            
+            </div>
+
             <div class="analog-button-container">
                 <button type="button" class="analog-button">+</button>
                 <button type="button" class="analog-button">-</button>
-            </div>        
+            </div>
             <InputTextArea @bind-Value="formModel.Image" class="form-control name-input" />
         </div>
     </div>
@@ -72,39 +106,89 @@
 {
     <div class="modal-overlay">
         <div class="modal-content">
-            <h2>⚡ Piece Created ⚡</h2>
-            <p>The Piece will be approved by our staff</p>
+            <h2>Mention Created</h2>
+            <p>The mention will be approved by our staff</p>
             <button @onclick="CloseModal">
                 OK
             </button>
         </div>
     </div>
 }
+
 @code {
     private FormMentionModel formModel = new();
     private bool isModalVisible;
-    private bool showDropdown;
-    private string searchTerm = "";
+    private bool showMentionerDropdown;
+    private bool showMentionedDropdown;
+    private string mentionerSearchTerm = "";
+    private string mentionedSearchTerm = "";
     private List<PieceComboboxDto?> MentionerPieces = new();
+    private List<PieceComboboxDto?> MentionedPieces = new();
 
-    private void OnInputChanged(ChangeEventArgs e)
+    [Parameter]
+    public Guid? MentionedPieceId { get; set; }
+
+    [Parameter]
+    public string? MentionedPieceName { get; set; }
+
+    [Parameter]
+    public EventCallback<FormMentionModel> OnSubmit { get; set; }
+
+    protected override void OnParametersSet()
     {
-        searchTerm = e.Value?.ToString() ?? "";
-        _ = OnSearchChanged(); // Chama o método assíncrono
+        ApplyMentionedPieceContext();
     }
 
-    private async Task OnSearchChanged()
+    private void ApplyMentionedPieceContext()
     {
-        if (!string.IsNullOrWhiteSpace(searchTerm) && searchTerm.Length >= 2)
+        if (MentionedPieceId.HasValue)
         {
-            MentionerPieces = await MentionService.GetMentionByNameAsync(searchTerm);
-            showDropdown = true;
+            formModel.MentionedPieceId = MentionedPieceId;
+            mentionedSearchTerm = MentionedPieceName ?? "";
+        }
+    }
+
+    private void OnMentionerInputChanged(ChangeEventArgs e)
+    {
+        mentionerSearchTerm = e.Value?.ToString() ?? "";
+        _ = OnMentionerSearchChanged();
+    }
+
+    private async Task OnMentionerSearchChanged()
+    {
+        if (!string.IsNullOrWhiteSpace(mentionerSearchTerm) && mentionerSearchTerm.Length >= 2)
+        {
+            MentionerPieces = await MentionService.GetMentionByNameAsync(mentionerSearchTerm) ?? new();
+            showMentionerDropdown = true;
         }
         else
         {
             MentionerPieces.Clear();
-            showDropdown = false;
+            showMentionerDropdown = false;
         }
+
+        StateHasChanged();
+    }
+
+    private void OnMentionedInputChanged(ChangeEventArgs e)
+    {
+        mentionedSearchTerm = e.Value?.ToString() ?? "";
+        _ = OnMentionedSearchChanged();
+    }
+
+    private async Task OnMentionedSearchChanged()
+    {
+        if (!string.IsNullOrWhiteSpace(mentionedSearchTerm) && mentionedSearchTerm.Length >= 2)
+        {
+            MentionedPieces = await MentionService.GetMentionByNameAsync(mentionedSearchTerm) ?? new();
+            showMentionedDropdown = true;
+        }
+        else
+        {
+            MentionedPieces.Clear();
+            showMentionedDropdown = false;
+        }
+
         StateHasChanged();
     }
 
@@ -112,9 +196,19 @@
     {
         if (selected is null) return;
 
-        formModel.MentionerPiece = selected.Id;
-        searchTerm = selected.Name;
-        showDropdown = false;
+        formModel.MentionerPieceId = selected.Id;
+        mentionerSearchTerm = selected.Name;
+        showMentionerDropdown = false;
+        StateHasChanged();
+    }
+
+    private void SelectMentionedPiece(PieceComboboxDto? selected)
+    {
+        if (selected is null) return;
+
+        formModel.MentionedPieceId = selected.Id;
+        mentionedSearchTerm = selected.Name;
+        showMentionedDropdown = false;
         StateHasChanged();
     }
 
@@ -122,11 +216,9 @@
     {
         isModalVisible = false;
         formModel = new();
+        ApplyMentionedPieceContext();
         StateHasChanged();
     }
-
-    [Parameter]
-    public EventCallback<FormMentionModel> OnSubmit { get; set; }
 
     private async Task HandleSubmit()
     {
@@ -137,7 +229,7 @@
     {
         isModalVisible = true;
         StateHasChanged();
-        
+
         await Task.Delay(3000);
         CloseModal();
     }

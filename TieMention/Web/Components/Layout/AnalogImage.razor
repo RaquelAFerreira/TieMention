@@ -1,3 +1,5 @@
+@inject NavigationManager Navigation
+
 <div class="main-container">
     <div class="image-container">
         <div class="image-border outer"></div>
@@ -6,7 +8,7 @@
     </div> 
     
     <div class="analog-button-container">
-        <button class="analog-button">+</button>
+        <button class="analog-button" @onclick="CreateMention">+</button>
         <button class="analog-button">-</button>
         <button class="analog-button">:</button>
         <button class="analog-button">:</button>
@@ -19,4 +21,27 @@
     [Parameter]
     public String? Image {get; set;}
 
+    [Parameter]
+    public Guid? MentionedPieceId { get; set; }
+
+    [Parameter]
+    public string? MentionedPieceName { get; set; }
+
+    private void CreateMention()
+    {
+        if (MentionedPieceId is null)
+        {
+            Navigation.NavigateTo("Mention/Create");
+            return;
+        }
+
+        var url = $"Mention/Create?mentionedPieceId={MentionedPieceId}";
+
+        if (!string.IsNullOrWhiteSpace(MentionedPieceName))
+        {
+            url += $"&mentionedPieceName={Uri.EscapeDataString(MentionedPieceName)}";
+        }
+
+        Navigation.NavigateTo(url);
+    }
 }
